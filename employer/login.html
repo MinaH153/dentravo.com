@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Login - Dentravo</title>
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+        .login-card {
+            background: var(--surface);
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 420px;
+        }
+        .login-card h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+            color: var(--text);
+        }
+        .login-card p.subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.7rem 0.85rem;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: var(--text);
+            background: var(--bg);
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+        }
+        .login-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 0.5rem;
+        }
+        .login-btn:hover { background: #1D4ED8; }
+        .login-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .error-msg {
+            background: #FEF2F2;
+            color: #DC2626;
+            padding: 0.65rem 0.85rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            display: none;
+        }
+        .logo-area {
+            text-align: center;
+            margin-bottom: 1.75rem;
+        }
+        .logo-area .logo-text {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .logo-area .logo-sub {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo-area">
+                <div class="logo-text">Dentravo</div>
+                <div class="logo-sub">Employer Portal</div>
+            </div>
+            <h1>Sign In</h1>
+            <p class="subtitle">Access your employer dashboard</p>
+            <div class="error-msg" id="errorMsg"></div>
+            <form id="loginForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="admin@company.com" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="login-btn" id="loginBtn">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script>
+        const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // If already logged in, redirect
+        (async () => {
+            const { data: { session } } = await sb.auth.getSession();
+            if (session) window.location.href = 'index.html';
+        })();
+
+        document.getElementById('loginForm').addEventListener('submit', async () => {
+            const btn = document.getElementById('loginBtn');
+            const errEl = document.getElementById('errorMsg');
+            errEl.style.display = 'none';
+            btn.disabled = true;
+            btn.textContent = 'Signing in...';
+
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+
+            try {
+                const { data, error } = await sb.auth.signInWithPassword({ email, password });
+                if (error) throw error;
+
+                // Verify this user is an employer admin
+                const { data: employer, error: empErr } = await sb.from('employer_accounts')
+                    .select('id')
+                    .eq('admin_user_id', data.user.id)
+                    .eq('is_active', true)
+                    .single();
+
+                if (empErr || !employer) {
+                    await sb.auth.signOut();
+                    throw new Error('This account is not linked to an employer. Contact support.');
+                }
+
+                window.location.href = 'index.html';
+            } catch (e) {
+                errEl.textContent = e.message || 'Login failed. Please try again.';
+                errEl.style.display = 'block';
+                btn.disabled = false;
+                btn.textContent = 'Sign In';
+            }
+        });
+    </script>
+</body>
+</html>

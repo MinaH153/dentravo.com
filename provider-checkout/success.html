@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Activated - Dentravo</title>
+  <style>
+    :root {
+      --primary: #2563EB;
+      --surface: #FFFFFF;
+      --bg: #F8FAFC;
+      --text: #0F172A;
+      --textSecondary: #64748B;
+      --success: #10B981;
+      --radius: 16px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 48px 40px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+    .icon {
+      width: 72px;
+      height: 72px;
+      background: var(--success);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .icon svg { width: 36px; height: 36px; fill: white; }
+    h1 { font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+    .subtitle {
+      font-size: 16px;
+      color: var(--textSecondary);
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+    .tier-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+    .steps {
+      text-align: left;
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+    .steps h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--textSecondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 8px 0;
+    }
+    .step-num {
+      width: 24px;
+      height: 24px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .step-text { font-size: 14px; color: var(--text); line-height: 1.4; }
+    .cta {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .cta:hover { opacity: 0.9; }
+    .footer {
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--textSecondary);
+    }
+    .footer a { color: var(--primary); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">
+      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+    </div>
+    <h1>You're All Set!</h1>
+    <p class="subtitle">Your Dentravo provider subscription is now active. Your practice dashboard has been upgraded.</p>
+    <div id="tier-badge" class="tier-badge" style="display:none;"></div>
+    <div class="steps">
+      <h3>Next Steps</h3>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Open the Dentravo app to see your upgraded dashboard</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Add office photos to attract more patients</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">Complete your profile for maximum visibility</div>
+      </div>
+    </div>
+    <a href="brightbite://provider" class="cta">Open Dentravo App</a>
+    <p class="footer">
+      Questions? Contact <a href="mailto:support@dentravo.com">support@dentravo.com</a>
+    </p>
+  </div>
+  <script>
+    // Extract session_id from URL params for reference
+    const params = new URLSearchParams(window.location.search);
+    const sessionId = params.get('session_id');
+    if (sessionId) {
+      console.log('Checkout session:', sessionId);
+    }
+  </script>
+</body>
+</html>

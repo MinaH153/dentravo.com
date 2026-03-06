@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Cancelled - Dentravo</title>
+  <style>
+    :root {
+      --primary: #2563EB;
+      --surface: #FFFFFF;
+      --bg: #F8FAFC;
+      --text: #0F172A;
+      --textSecondary: #64748B;
+      --warning: #F59E0B;
+      --radius: 16px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 48px 40px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+    .icon {
+      width: 72px;
+      height: 72px;
+      background: var(--warning);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .icon svg { width: 36px; height: 36px; fill: white; }
+    h1 { font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+    .subtitle {
+      font-size: 16px;
+      color: var(--textSecondary);
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+    .benefits {
+      text-align: left;
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+    .benefits h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--textSecondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 0;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .benefit-check { color: var(--primary); font-weight: bold; }
+    .buttons { display: flex; flex-direction: column; gap: 12px; }
+    .cta {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: opacity 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .cta:hover { opacity: 0.9; }
+    .cta-secondary {
+      display: inline-block;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .footer {
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--textSecondary);
+    }
+    .footer a { color: var(--primary); text-decoration: none; }
+    .integrity {
+      margin-top: 20px;
+      padding: 12px 16px;
+      background: rgba(37, 99, 235, 0.05);
+      border-radius: 8px;
+      font-size: 12px;
+      color: var(--textSecondary);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+    </div>
+    <h1>No Worries</h1>
+    <p class="subtitle">Your checkout was cancelled. Your Starter plan is still active and you can upgrade anytime from the app.</p>
+    <div class="benefits">
+      <h3>What You're Missing</h3>
+      <div class="benefit"><span class="benefit-check">+</span> NPI-verified trust badge</div>
+      <div class="benefit"><span class="benefit-check">+</span> Online booking integration</div>
+      <div class="benefit"><span class="benefit-check">+</span> Office photos and analytics</div>
+      <div class="benefit"><span class="benefit-check">+</span> Review response tools</div>
+    </div>
+    <div class="buttons">
+      <a href="brightbite://provider" class="cta">Return to App</a>
+      <a href="mailto:support@dentravo.com" class="cta-secondary">Have questions? Talk to us</a>
+    </div>
+    <div class="integrity">
+      Reminder: Your tier never affects search rankings. Rankings are always based on proximity, insurance match, reviews, and transparency.
+    </div>
+    <p class="footer">
+      <a href="https://dentravo.com">dentravo.com</a>
+    </p>
+  </div>
+</body>
+</html>

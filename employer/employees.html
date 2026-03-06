@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees - Dentravo Employer Portal</title>
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        .deactivate-confirm {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+        }
+        .deactivate-confirm.open { display: flex; }
+        .confirm-dialog {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+        }
+        .confirm-dialog h3 {
+            margin-bottom: 0.5rem;
+        }
+        .confirm-dialog p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        .confirm-actions {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: flex-end;
+        }
+        .confirm-actions button {
+            padding: 0.5rem 1.1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-cancel {
+            background: var(--bg);
+            color: var(--text);
+            border: 1px solid var(--border) !important;
+        }
+        .btn-cancel:hover { background: #E2E8F0; }
+        .btn-confirm-danger {
+            background: var(--danger);
+            color: #fff;
+        }
+        .btn-confirm-danger:hover { background: #B91C1C; }
+        .search-bar {
+            margin-bottom: 1rem;
+        }
+        .search-bar input {
+            width: 100%;
+            max-width: 320px;
+            padding: 0.6rem 0.85rem;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--text);
+            background: var(--surface);
+        }
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.html" class="nav-brand">
+            <span class="brand-name">Dentravo</span>
+            <span class="brand-tag">Employer</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="employees.html" class="active">Employees</a>
+            <button class="sign-out-btn" onclick="signOut()">Sign Out</button>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <h1 class="page-title">Employees</h1>
+        <p class="page-subtitle" id="subtitle">Manage your enrolled team members</p>
+
+        <div class="card">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by name or email..." oninput="filterTable()">
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Enrolled</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeeTableBody">
+                        <tr>
+                            <td colspan="5">
+                                <div class="skeleton" style="width:80%;margin:0.5rem auto"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="empty-state" id="emptyState" style="display:none">
+                <div class="empty-icon">--</div>
+                <p>No employees enrolled yet. Share your invite code to get started.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Deactivate Confirmation Dialog -->
+    <div class="deactivate-confirm" id="confirmModal">
+        <div class="confirm-dialog">
+            <h3>Deactivate Employee</h3>
+            <p>Are you sure you want to deactivate <strong id="deactivateName">this employee</strong>? They will lose access to employer benefits.</p>
+            <div class="confirm-actions">
+                <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+                <button class="btn-confirm-danger" id="confirmDeactivateBtn" onclick="confirmDeactivate()">Deactivate</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        let allEmployees = [];
+        let pendingDeactivateId = null;
+        let pendingDeactivateName = '';
+
+        (async () => {
+            const auth = await requireAuth();
+            if (!auth) return;
+            await loadEmployees(auth.employer.id);
+        })();
+
+        async function loadEmployees(employerId) {
+            const sb = getSb();
+            const tbody = document.getElementById('employeeTableBody');
+
+            // Fetch links with profile join
+            const { data: links, error } = await sb.from('employer_user_links')
+                .select('id, user_id, enrolled_at, is_active, profiles:user_id(display_name)')
+                .eq('employer_id', employerId)
+                .order('enrolled_at', { ascending: false });
+
+            if (error) {
+                tbody.innerHTML = '<tr><td colspan="5" style="color:var(--danger);text-align:center;padding:1.5rem">Failed to load employees. Please refresh.</td></tr>';
+                return;
+            }
+
+            if (!links || links.length === 0) {
+                tbody.innerHTML = '';
+                document.getElementById('emptyState').style.display = 'block';
+                return;
+            }
+
+            // Also get emails from auth admin or just show user_id partial
+            allEmployees = links.map(link => ({
+                id: link.id,
+                user_id: link.user_id,
+                name: link.profiles?.display_name || 'Unknown',
+                email: link.user_id ? link.user_id.substring(0, 8) + '...' : '--',
+                enrolled_at: link.enrolled_at,
+                is_active: link.is_active
+            }));
+
+            document.getElementById('subtitle').textContent =
+                allEmployees.length + ' employee' + (allEmployees.length !== 1 ? 's' : '') + ' enrolled';
+
+            renderTable(allEmployees);
+        }
+
+        function renderTable(employees) {
+            const tbody = document.getElementById('employeeTableBody');
+            const emptyState = document.getElementById('emptyState');
+
+            if (employees.length === 0) {
+                tbody.innerHTML = '';
+                emptyState.style.display = 'block';
+                return;
+            }
+            emptyState.style.display = 'none';
+
+            tbody.innerHTML = employees.map(emp => `
+                <tr>
+                    <td style="font-weight:500">${escapeHtml(emp.name)}</td>
+                    <td style="color:var(--text-secondary);font-size:0.85rem">${escapeHtml(emp.email)}</td>
+                    <td>${formatDate(emp.enrolled_at)}</td>
+                    <td>
+                        <span class="badge ${emp.is_active ? 'badge-success' : 'badge-danger'}">
+                            ${emp.is_active ? 'Active' : 'Inactive'}
+                        </span>
+                    </td>
+                    <td>
+                        ${emp.is_active
+                            ? `<button class="btn-sm btn-danger" onclick="openDeactivateModal('${emp.id}', '${escapeHtml(emp.name)}')">Deactivate</button>`
+                            : '<span style="color:var(--text-secondary);font-size:0.8rem">--</span>'}
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function filterTable() {
+            const q = document.getElementById('searchInput').value.toLowerCase().trim();
+            if (!q) {
+                renderTable(allEmployees);
+                return;
+            }
+            const filtered = allEmployees.filter(emp =>
+                emp.name.toLowerCase().includes(q) || emp.email.toLowerCase().includes(q)
+            );
+            renderTable(filtered);
+        }
+
+        function openDeactivateModal(linkId, name) {
+            pendingDeactivateId = linkId;
+            pendingDeactivateName = name;
+            document.getElementById('deactivateName').textContent = name;
+            document.getElementById('confirmModal').classList.add('open');
+        }
+
+        function closeModal() {
+            document.getElementById('confirmModal').classList.remove('open');
+            pendingDeactivateId = null;
+        }
+
+        async function confirmDeactivate() {
+            if (!pendingDeactivateId) return;
+            const btn = document.getElementById('confirmDeactivateBtn');
+            btn.disabled = true;
+            btn.textContent = 'Deactivating...';
+
+            const { error } = await getSb().from('employer_user_links')
+                .update({ is_active: false })
+                .eq('id', pendingDeactivateId);
+
+            if (error) {
+                alert('Failed to deactivate. Please try again.');
+            } else {
+                // Update local state
+                const emp = allEmployees.find(e => e.id === pendingDeactivateId);
+                if (emp) emp.is_active = false;
+                renderTable(allEmployees);
+            }
+
+            btn.disabled = false;
+            btn.textContent = 'Deactivate';
+            closeModal();
+        }
+
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>

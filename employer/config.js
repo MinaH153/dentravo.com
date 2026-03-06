@@ -1,0 +1,3 @@
+// Dentravo Employer Portal - Configuration
+const SUPABASE_URL = 'https://ufwfhmhiphfzyfijckws.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVmd2ZobWhpcGhmenlmaWpja3dzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAxMDMwMTEsImV4cCI6MjA4NTY3OTAxMX0.YYanROGiVWkf5mbN06_mq9Q4qYLA7gAPJlCEMYBu0TY';

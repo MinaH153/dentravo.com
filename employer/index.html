@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Dentravo Employer Portal</title>
+    <link rel="stylesheet" href="shared.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.html" class="nav-brand">
+            <span class="brand-name">Dentravo</span>
+            <span class="brand-tag">Employer</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="employees.html">Employees</a>
+            <button class="sign-out-btn" onclick="signOut()">Sign Out</button>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <h1 class="page-title" id="companyName"><span class="skeleton" style="display:inline-block;width:180px;height:1.5rem"></span></h1>
+        <p class="page-subtitle" id="adminEmail">Loading...</p>
+
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-label">Plan</div>
+                <div class="stat-value" id="planType">--</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Seats</div>
+                <div class="stat-value" id="employeeCount">--</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Active Enrolled</div>
+                <div class="stat-value primary" id="activeCount">--</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Est. Monthly Cost</div>
+                <div class="stat-value" id="monthlyCost">--</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Employee Invite Code</h2>
+                <span class="badge badge-primary" id="planBadge">--</span>
+            </div>
+            <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:0.75rem;">
+                Share this code with employees so they can link their Dentravo account to your company plan.
+            </p>
+            <div class="invite-box">
+                <span class="code" id="inviteCode">------</span>
+                <button class="copy-btn" id="copyBtn" onclick="copyInviteCode()">Copy Code</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        const PLAN_PRICES = { basic: 4.99, pro: 7.99 };
+
+        (async () => {
+            const auth = await requireAuth();
+            if (!auth) return;
+            const { employer } = auth;
+
+            // Populate company info
+            document.getElementById('companyName').textContent = employer.company_name;
+            document.getElementById('adminEmail').textContent = employer.admin_email;
+
+            const planLabel = (employer.plan || 'basic').charAt(0).toUpperCase() + (employer.plan || 'basic').slice(1);
+            document.getElementById('planType').textContent = planLabel;
+            document.getElementById('planBadge').textContent = planLabel + ' Plan';
+            document.getElementById('employeeCount').textContent = employer.employee_count || 0;
+            document.getElementById('inviteCode').textContent = employer.invite_code || 'N/A';
+
+            // Fetch active enrolled count
+            const { count, error } = await getSb().from('employer_user_links')
+                .select('id', { count: 'exact', head: true })
+                .eq('employer_id', employer.id)
+                .eq('is_active', true);
+
+            const activeCount = error ? 0 : (count || 0);
+            document.getElementById('activeCount').textContent = activeCount;
+
+            const pricePerSeat = PLAN_PRICES[employer.plan] || PLAN_PRICES.basic;
+            const cost = (activeCount * pricePerSeat).toFixed(2);
+            document.getElementById('monthlyCost').textContent = '$' + cost + '/mo';
+        })();
+
+        function copyInviteCode() {
+            const code = document.getElementById('inviteCode').textContent;
+            if (!code || code === 'N/A') return;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.textContent = 'Copied!';
+                setTimeout(() => { btn.textContent = 'Copy Code'; }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
