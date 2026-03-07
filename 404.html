@@ -24,10 +24,22 @@
     </div>
 </nav>
 
-<div class="page-404">
-    <h1>404</h1>
-    <p>This page doesn't exist. Let's get you back on track.</p>
-    <a href="/" class="btn btn-accent">Go Home</a>
+<div class="page-404" style="position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 40%,rgba(99,102,241,.06),transparent 60%)"></div>
+    <div style="position:relative;z-index:1">
+        <h1>404</h1>
+        <svg viewBox="0 0 200 220" width="120" style="margin:0 auto 24px;display:block" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="50%" stop-color="#F8FAFC"/><stop offset="100%" stop-color="#CBD5E1"/></linearGradient></defs>
+            <g style="animation:tooth-idle 6s ease-in-out infinite">
+                <path d="M100 20 C70 20 50 42 48 70 C46 86 48 108 54 126 C59 140 66 156 76 168 C82 176 90 182 96 182 C100 182 100 178 100 178 C100 178 100 182 104 182 C110 182 118 176 124 168 C134 156 142 140 146 126 C152 108 154 86 152 70 C150 42 130 20 100 20Z" fill="url(#tg)"/>
+                <ellipse cx="86" cy="72" rx="8" ry="10" fill="#1E2940"/><ellipse cx="114" cy="72" rx="8" ry="10" fill="#1E2940"/>
+                <circle cx="90" cy="68" r="2" fill="white" opacity=".8"/><circle cx="118" cy="68" r="2" fill="white" opacity=".8"/>
+                <path d="M86 100 Q100 86 114 100" fill="none" stroke="#1E2940" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+        </svg>
+        <p>Pico looked everywhere, but this page doesn't exist.</p>
+        <a href="/" class="btn btn-accent">Take Me Home</a>
+    </div>
 </div>
 
 <footer class="footer">

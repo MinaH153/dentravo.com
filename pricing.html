@@ -34,7 +34,7 @@
     </div>
 </nav>
 
-<section class="hero" style="min-height:auto;padding:140px 24px 40px">
+<section class="hero" style="min-height:auto;padding:160px 24px 60px">
     <div class="hero-bg"></div>
     <div class="sec-header" style="position:relative;z-index:1">
         <span class="overline ol-accent">Pricing</span>
@@ -43,7 +43,9 @@
     </div>
 </section>
 
-<section class="sec-full" style="background:linear-gradient(180deg,var(--navy-deep),var(--bg))">
+<div class="sec-divider"></div>
+
+<section class="sec-full">
     <div class="sec" style="padding-top:40px">
         <div class="pricing-grid rv">
             <div class="price-card">
@@ -90,65 +92,71 @@
     </div>
 </section>
 
+<div class="sec-divider"></div>
+
 <!-- Compare Plans -->
-<section class="sec-full" style="background:linear-gradient(180deg,var(--bg),var(--bg-grouped))">
+<section class="sec-full">
     <div class="sec">
         <div class="sec-header rv">
             <span class="overline ol-info">Compare Plans</span>
             <h2>What's included at every level</h2>
         </div>
-        <div style="overflow-x:auto" class="rv">
-            <table style="width:100%;border-collapse:collapse;font-size:15px">
+        <div class="rv" style="overflow-x:auto">
+            <table class="compare-table">
                 <thead>
-                    <tr style="border-bottom:2px solid var(--divider)">
-                        <th style="text-align:left;padding:12px 16px;font-weight:600;color:var(--text-primary)">Feature</th>
-                        <th style="text-align:center;padding:12px 16px;font-weight:600;color:var(--text-primary)">Free</th>
-                        <th style="text-align:center;padding:12px 16px;font-weight:600;color:var(--accent)">Plus</th>
-                        <th style="text-align:center;padding:12px 16px;font-weight:600;color:var(--text-primary)">Family</th>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Free</th>
+                        <th class="th-accent">Plus</th>
+                        <th>Family</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Clinic Search</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
-                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Pico AI (unlimited)</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
-                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Reviews &amp; Ratings</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
-                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Insurance Verification</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">Basic</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
-                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Appointment Booking</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
-                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Benefit Tracker</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
-                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Cost Estimates</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
-                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Anxiety Toolkit</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
-                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Family Members (up to 5)</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
-                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Family Dashboard</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
-                    <tr><td style="padding:12px 16px;color:var(--text-secondary)">Shared Calendar</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
+                    <tr><td>Clinic Search</td><td class="check">&#10003;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+                    <tr><td>Pico AI (unlimited)</td><td class="check">&#10003;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+                    <tr><td>Reviews &amp; Ratings</td><td class="check">&#10003;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+                    <tr><td>Insurance Verification</td><td class="dash">Basic</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+                    <tr><td>Appointment Booking</td><td class="check">&#10003;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+                    <tr><td>Benefit Tracker</td><td class="dash">&mdash;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+                    <tr><td>Cost Estimates</td><td class="dash">&mdash;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+                    <tr><td>Anxiety Toolkit</td><td class="dash">&mdash;</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+                    <tr><td>Family Members (up to 5)</td><td class="dash">&mdash;</td><td class="dash">&mdash;</td><td class="check">&#10003;</td></tr>
+                    <tr><td>Family Dashboard</td><td class="dash">&mdash;</td><td class="dash">&mdash;</td><td class="check">&#10003;</td></tr>
+                    <tr><td>Shared Calendar</td><td class="dash">&mdash;</td><td class="dash">&mdash;</td><td class="check">&#10003;</td></tr>
                 </tbody>
             </table>
         </div>
     </div>
 </section>
 
+<div class="sec-divider"></div>
+
 <!-- FAQ -->
-<section class="sec-full" style="background:linear-gradient(180deg,var(--bg-grouped),var(--bg))">
+<section class="sec-full">
     <div class="sec">
         <div class="sec-header rv"><h2>Frequently Asked Questions</h2></div>
-        <div style="max-width:680px;margin:0 auto" class="rv">
-            <details style="border-bottom:1px solid var(--divider);padding:20px 0">
-                <summary style="font-size:17px;font-weight:600;cursor:pointer;list-style:none;color:var(--text-primary)">Is Pico AI really free?</summary>
-                <p style="margin-top:12px;font-size:15px;color:var(--text-tertiary);line-height:1.6">Yes. Pico AI &mdash; including text, photo analysis, and voice input &mdash; is completely free for all users. It runs on-device using Apple's Foundation Models, so there are no server costs to pass on to you.</p>
+        <div class="faq rv">
+            <details>
+                <summary>Is Pico AI really free?</summary>
+                <p class="faq-body">Yes. Pico AI &mdash; including text, photo analysis, and voice input &mdash; is completely free for all users. It runs on-device using Apple's Foundation Models, so there are no server costs to pass on to you.</p>
             </details>
-            <details style="border-bottom:1px solid var(--divider);padding:20px 0">
-                <summary style="font-size:17px;font-weight:600;cursor:pointer;list-style:none;color:var(--text-primary)">Can I cancel my subscription anytime?</summary>
-                <p style="margin-top:12px;font-size:15px;color:var(--text-tertiary);line-height:1.6">Absolutely. You can cancel through your Apple ID settings at any time. You'll keep access to premium features until the end of your billing period.</p>
+            <details>
+                <summary>Can I cancel my subscription anytime?</summary>
+                <p class="faq-body">Absolutely. You can cancel through your Apple ID settings at any time. You'll keep access to premium features until the end of your billing period.</p>
             </details>
-            <details style="border-bottom:1px solid var(--divider);padding:20px 0">
-                <summary style="font-size:17px;font-weight:600;cursor:pointer;list-style:none;color:var(--text-primary)">Do subscriptions affect clinic rankings?</summary>
-                <p style="margin-top:12px;font-size:15px;color:var(--text-tertiary);line-height:1.6">Never. Dentravo+ subscriptions give you personal tools like benefit tracking and cost estimates. They have zero impact on how clinics are ranked or displayed. Trust and transparency are fundamental to everything we do.</p>
+            <details>
+                <summary>Do subscriptions affect clinic rankings?</summary>
+                <p class="faq-body">Never. Dentravo+ subscriptions give you personal tools like benefit tracking and cost estimates. They have zero impact on how clinics are ranked or displayed. Trust and transparency are fundamental to everything we do.</p>
             </details>
-            <details style="border-bottom:1px solid var(--divider);padding:20px 0">
-                <summary style="font-size:17px;font-weight:600;cursor:pointer;list-style:none;color:var(--text-primary)">What iOS version do I need?</summary>
-                <p style="margin-top:12px;font-size:15px;color:var(--text-tertiary);line-height:1.6">Dentravo requires iOS 26 or later. Pico AI's on-device features require an iPhone with Apple Intelligence support.</p>
+            <details>
+                <summary>What iOS version do I need?</summary>
+                <p class="faq-body">Dentravo requires iOS 26 or later. Pico AI's on-device features require an iPhone with Apple Intelligence support.</p>
             </details>
         </div>
     </div>
 </section>
+
+<div class="sec-divider"></div>
 
 <!-- CTA -->
 <section class="cta-section">
