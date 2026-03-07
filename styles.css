@@ -1,4 +1,4 @@
-/* ===== DENTRAVO V4 — PRESTIGE THEME + PICO ALIVE ===== */
+/* ===== DENTRAVO V5 — CLEAN PROFESSIONAL ===== */
 
 :root {
     /* === PrestigeTheme Dark Mode Palette (from app) === */
@@ -100,7 +100,7 @@ img{max-width:100%;display:block}
 .nav-toggle span{display:block;width:22px;height:2px;background:var(--text-primary);margin:5px 0}
 
 /* ===== HERO ===== */
-.hero{min-height:auto;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 60px}
+.hero{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:140px 24px 48px}
 .hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 120% 80% at 20% 20%,rgba(99,102,241,.18) 0%,transparent 50%),radial-gradient(ellipse 100% 60% at 80% 30%,rgba(56,189,248,.14) 0%,transparent 50%),radial-gradient(ellipse 80% 50% at 50% 80%,rgba(52,211,153,.08) 0%,transparent 40%),linear-gradient(180deg,var(--bg) 0%,var(--navy-deep) 100%)}
 .stars{position:absolute;inset:0;z-index:0}
 .star{position:absolute;width:2px;height:2px;background:white;border-radius:50%;animation:pulse 3s ease-in-out infinite}
@@ -114,16 +114,14 @@ img{max-width:100%;display:block}
 .particle{position:absolute;border-radius:50%;animation:particle-rise linear infinite}
 
 .hero>*{position:relative;z-index:1}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-radius:100px;background:var(--accent-tonal);border:1px solid rgba(129,140,248,.15);font-size:13px;font-weight:600;color:var(--accent);margin-bottom:20px;animation:fade-up .8s var(--ease) both}
-.hero-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--success);animation:pulse 2s ease-in-out infinite}
-.hero h1{font-size:clamp(38px,7vw,72px);font-weight:900;line-height:1.05;letter-spacing:-2px;max-width:800px;margin-bottom:20px;animation:fade-up 1s var(--ease) .1s both}
+.hero h1{font-size:clamp(40px,7vw,76px);font-weight:900;line-height:1.05;letter-spacing:-2.5px;max-width:800px;margin-bottom:20px;animation:fade-up 1s var(--ease) both}
 .hero h1 .grad{background:linear-gradient(135deg,var(--accent),var(--info),var(--success));background-size:300% 300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gradient-shift 6s ease infinite}
-.hero .subtitle{font-size:clamp(16px,2vw,19px);color:var(--text-secondary);max-width:580px;line-height:1.6;margin-bottom:28px;animation:fade-up 1s var(--ease) .25s both}
-.hero .btn-row{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;animation:fade-up 1s var(--ease) .4s both}
-.hero .meta{margin-top:16px;font-size:12px;color:var(--text-tertiary);letter-spacing:1px;text-transform:uppercase;animation:fade-up 1s var(--ease) .55s both;opacity:.5}
+.hero .subtitle{font-size:clamp(16px,2vw,20px);color:var(--text-secondary);max-width:560px;line-height:1.6;margin-bottom:32px;animation:fade-up 1s var(--ease) .15s both}
+.hero .btn-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fade-up 1s var(--ease) .3s both}
+.hero .meta{margin-top:16px;font-size:11px;color:var(--text-tertiary);letter-spacing:1.5px;text-transform:uppercase;animation:fade-up 1s var(--ease) .45s both;opacity:.4}
 
 /* ===== PICO TOOTH FAIRY ===== */
-.pico-fairy{margin-top:32px;position:relative;animation:bounce-in 1.2s var(--spring) .7s both}
+.pico-fairy{margin-top:40px;position:relative;animation:bounce-in 1.2s var(--spring) .5s both}
 .pico-fairy svg{filter:drop-shadow(0 20px 60px rgba(99,102,241,.3))}
 .pico-body{animation:tooth-idle 6s ease-in-out infinite}
 .pico-wing-l{transform-origin:75% 50%;animation:wing-left 2s ease-in-out infinite}
@@ -185,7 +183,7 @@ img{max-width:100%;display:block}
 .ol-warning{background:var(--warning-tonal);color:var(--warning);border:1px solid rgba(251,191,36,.15)}
 .ol-danger{background:var(--danger-tonal);color:var(--danger);border:1px solid rgba(248,113,113,.15)}
 .ol-neutral{background:var(--neutral-tonal);color:var(--neutral);border:1px solid rgba(148,163,184,.15)}
-.sec-header h2{font-size:clamp(32px,5vw,54px);font-weight:900;line-height:1.08;letter-spacing:-1px;margin-bottom:20px}
+.sec-header h2{font-size:clamp(28px,4.5vw,48px);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:16px}
 .sec-header p{font-size:18px;color:var(--text-tertiary);line-height:1.7}
 
 /* ===== CARDS ===== */
@@ -219,7 +217,7 @@ img{max-width:100%;display:block}
 
 /* ===== STATS ===== */
 .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;text-align:center}
-.stat .stat-num{font-size:48px;font-weight:900;letter-spacing:-2px}
+.stat .stat-num{font-size:48px;font-weight:900;letter-spacing:-2px;color:var(--text-primary)}
 .stat .stat-label{font-size:14px;color:var(--text-tertiary);margin-top:6px;font-weight:500}
 
 /* ===== STEPS ===== */
