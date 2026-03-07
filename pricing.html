@@ -19,224 +19,152 @@
 
 <nav class="nav">
     <div class="nav-inner">
-        <a href="/" class="nav-brand">Dentravo</a>
-        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
+        <a href="/" class="nav-logo">Dentravo</a>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         <div class="nav-links">
             <a href="/features">Features</a>
             <a href="/pricing">Pricing</a>
             <a href="/marketplace">For Clinics</a>
             <a href="/blog/">Blog</a>
-            <a href="#download" class="nav-cta">Download</a>
+            <a href="#download" class="nav-cta">Get the App</a>
         </div>
     </div>
 </nav>
 
-<div class="hero" style="min-height: auto; padding: 140px 24px 40px;">
-    <div class="section-header">
-        <p class="overline">Pricing</p>
-        <h1>Powerful dental tools, <span class="accent">mostly free</span></h1>
+<section class="hero" style="min-height:auto;padding:140px 24px 40px">
+    <div class="hero-bg"></div>
+    <div class="sec-header" style="position:relative;z-index:1">
+        <span class="overline ol-accent">Pricing</span>
+        <h1 style="font-size:clamp(36px,6vw,64px)">Powerful dental tools, <span class="grad">mostly free</span></h1>
         <p>Clinic search, Pico AI, reviews, booking, and basic insurance verification are free for everyone. Upgrade for advanced tracking and family features.</p>
     </div>
-</div>
+</section>
 
-<div class="section" style="padding-top: 40px;">
-    <div class="pricing-grid">
-        <div class="pricing-card">
-            <div class="tier-name">Free</div>
-            <div class="price">$0</div>
-            <div class="price-sub">Free forever</div>
-            <ul>
-                <li>Clinic search &amp; discovery</li>
-                <li>Full Pico AI (text, photo, voice)</li>
-                <li>Patient reviews &amp; ratings</li>
-                <li>Basic insurance verification</li>
-                <li>Appointment booking</li>
-                <li>Calendar integration</li>
-            </ul>
-            <a href="#download" class="btn btn-outline" style="width: 100%; justify-content: center;">Get Started</a>
-        </div>
-        <div class="pricing-card featured">
-            <div class="tier-name">Dentravo+</div>
-            <div class="price">$5.99<span style="font-size: 18px; font-weight: 400; color: var(--gray-500);">/mo</span></div>
-            <div class="price-sub">
-                Billed monthly
-                <span class="annual">or $47.99/year (save 33%)</span>
+<section class="sec-full" style="background:linear-gradient(180deg,var(--navy-deep),var(--bg))">
+    <div class="sec" style="padding-top:40px">
+        <div class="pricing-grid rv">
+            <div class="price-card">
+                <div class="price-tier">Free</div>
+                <div class="price-amount">$0</div>
+                <div class="price-period">Free forever</div>
+                <ul class="price-list">
+                    <li><span class="li-check">&#10003;</span>Clinic search &amp; discovery</li>
+                    <li><span class="li-check">&#10003;</span>Full Pico AI (text, photo, voice)</li>
+                    <li><span class="li-check">&#10003;</span>Patient reviews &amp; ratings</li>
+                    <li><span class="li-check">&#10003;</span>Basic insurance verification</li>
+                    <li><span class="li-check">&#10003;</span>Appointment booking</li>
+                    <li><span class="li-check">&#10003;</span>Calendar integration</li>
+                </ul>
+                <a href="#download" class="btn btn-ghost" style="width:100%;justify-content:center">Get Started</a>
             </div>
-            <ul>
-                <li>Everything in Free</li>
-                <li>Benefit Tracker with alerts</li>
-                <li>Procedure cost estimates</li>
-                <li>Dental anxiety toolkit</li>
-                <li>Priority support</li>
-            </ul>
-            <a href="#download" class="btn btn-primary" style="width: 100%; justify-content: center;">Start Free Trial</a>
-        </div>
-        <div class="pricing-card">
-            <div class="tier-name">Dentravo+ Family</div>
-            <div class="price">$9.99<span style="font-size: 18px; font-weight: 400; color: var(--gray-500);">/mo</span></div>
-            <div class="price-sub">
-                Billed monthly
-                <span class="annual">or $79.99/year (save 33%)</span>
+            <div class="price-card hot">
+                <div class="price-tier">Dentravo+</div>
+                <div class="price-amount">$5.99<span style="font-size:18px;font-weight:400;color:var(--text-tertiary)">/mo</span></div>
+                <div class="price-period">Billed monthly &middot; or $47.99/year (save 33%)</div>
+                <ul class="price-list">
+                    <li><span class="li-check">&#10003;</span>Everything in Free</li>
+                    <li><span class="li-check">&#10003;</span>Benefit Tracker with alerts</li>
+                    <li><span class="li-check">&#10003;</span>Procedure cost estimates</li>
+                    <li><span class="li-check">&#10003;</span>Dental anxiety toolkit</li>
+                    <li><span class="li-check">&#10003;</span>Priority support</li>
+                </ul>
+                <a href="#download" class="btn btn-accent" style="width:100%;justify-content:center">Start Free Trial</a>
             </div>
-            <ul>
-                <li>Everything in Dentravo+</li>
-                <li>Up to 5 family members</li>
-                <li>Shared family calendar</li>
-                <li>Family health dashboard</li>
-                <li>Dependent benefit tracking</li>
-            </ul>
-            <a href="#download" class="btn btn-outline" style="width: 100%; justify-content: center;">Start Free Trial</a>
+            <div class="price-card">
+                <div class="price-tier">Dentravo+ Family</div>
+                <div class="price-amount">$9.99<span style="font-size:18px;font-weight:400;color:var(--text-tertiary)">/mo</span></div>
+                <div class="price-period">Billed monthly &middot; or $79.99/year (save 33%)</div>
+                <ul class="price-list">
+                    <li><span class="li-check">&#10003;</span>Everything in Dentravo+</li>
+                    <li><span class="li-check">&#10003;</span>Up to 5 family members</li>
+                    <li><span class="li-check">&#10003;</span>Shared family calendar</li>
+                    <li><span class="li-check">&#10003;</span>Family health dashboard</li>
+                    <li><span class="li-check">&#10003;</span>Dependent benefit tracking</li>
+                </ul>
+                <a href="#download" class="btn btn-ghost" style="width:100%;justify-content:center">Start Free Trial</a>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="section-alt">
-    <div class="section">
-        <div class="section-header">
-            <p class="overline">Compare Plans</p>
+<!-- Compare Plans -->
+<section class="sec-full" style="background:linear-gradient(180deg,var(--bg),var(--bg-grouped))">
+    <div class="sec">
+        <div class="sec-header rv">
+            <span class="overline ol-info">Compare Plans</span>
             <h2>What's included at every level</h2>
         </div>
-        <div style="overflow-x: auto;">
-            <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+        <div style="overflow-x:auto" class="rv">
+            <table style="width:100%;border-collapse:collapse;font-size:15px">
                 <thead>
-                    <tr style="border-bottom: 2px solid var(--gray-200);">
-                        <th style="text-align: left; padding: 12px 16px; font-weight: 600;">Feature</th>
-                        <th style="text-align: center; padding: 12px 16px; font-weight: 600;">Free</th>
-                        <th style="text-align: center; padding: 12px 16px; font-weight: 600; color: var(--blue);">Plus</th>
-                        <th style="text-align: center; padding: 12px 16px; font-weight: 600;">Family</th>
+                    <tr style="border-bottom:2px solid var(--divider)">
+                        <th style="text-align:left;padding:12px 16px;font-weight:600;color:var(--text-primary)">Feature</th>
+                        <th style="text-align:center;padding:12px 16px;font-weight:600;color:var(--text-primary)">Free</th>
+                        <th style="text-align:center;padding:12px 16px;font-weight:600;color:var(--accent)">Plus</th>
+                        <th style="text-align:center;padding:12px 16px;font-weight:600;color:var(--text-primary)">Family</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="border-bottom: 1px solid var(--gray-100);">
-                        <td style="padding: 12px 16px;">Clinic Search</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--gray-100);">
-                        <td style="padding: 12px 16px;">Pico AI (unlimited)</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--gray-100);">
-                        <td style="padding: 12px 16px;">Reviews &amp; Ratings</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--gray-100);">
-                        <td style="padding: 12px 16px;">Insurance Verification</td>
-                        <td style="text-align: center; padding: 12px;">Basic</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--gray-100);">
-                        <td style="padding: 12px 16px;">Appointment Booking</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--gray-100);">
-                        <td style="padding: 12px 16px;">Benefit Tracker</td>
-                        <td style="text-align: center; padding: 12px; color: var(--gray-300);">&mdash;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--gray-100);">
-                        <td style="padding: 12px 16px;">Cost Estimates</td>
-                        <td style="text-align: center; padding: 12px; color: var(--gray-300);">&mdash;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--gray-100);">
-                        <td style="padding: 12px 16px;">Anxiety Toolkit</td>
-                        <td style="text-align: center; padding: 12px; color: var(--gray-300);">&mdash;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--gray-100);">
-                        <td style="padding: 12px 16px;">Family Members (up to 5)</td>
-                        <td style="text-align: center; padding: 12px; color: var(--gray-300);">&mdash;</td>
-                        <td style="text-align: center; padding: 12px; color: var(--gray-300);">&mdash;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid var(--gray-100);">
-                        <td style="padding: 12px 16px;">Family Dashboard</td>
-                        <td style="text-align: center; padding: 12px; color: var(--gray-300);">&mdash;</td>
-                        <td style="text-align: center; padding: 12px; color: var(--gray-300);">&mdash;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 12px 16px;">Shared Calendar</td>
-                        <td style="text-align: center; padding: 12px; color: var(--gray-300);">&mdash;</td>
-                        <td style="text-align: center; padding: 12px; color: var(--gray-300);">&mdash;</td>
-                        <td style="text-align: center; padding: 12px;">&#10003;</td>
-                    </tr>
+                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Clinic Search</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
+                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Pico AI (unlimited)</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
+                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Reviews &amp; Ratings</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
+                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Insurance Verification</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">Basic</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
+                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Appointment Booking</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
+                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Benefit Tracker</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
+                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Cost Estimates</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
+                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Anxiety Toolkit</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
+                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Family Members (up to 5)</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
+                    <tr style="border-bottom:1px solid var(--divider)"><td style="padding:12px 16px;color:var(--text-secondary)">Family Dashboard</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
+                    <tr><td style="padding:12px 16px;color:var(--text-secondary)">Shared Calendar</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--text-tertiary)">&mdash;</td><td style="text-align:center;padding:12px;color:var(--success)">&#10003;</td></tr>
                 </tbody>
             </table>
         </div>
     </div>
-</div>
+</section>
 
-<div class="section">
-    <div class="section-header">
-        <h2>Frequently Asked Questions</h2>
+<!-- FAQ -->
+<section class="sec-full" style="background:linear-gradient(180deg,var(--bg-grouped),var(--bg))">
+    <div class="sec">
+        <div class="sec-header rv"><h2>Frequently Asked Questions</h2></div>
+        <div style="max-width:680px;margin:0 auto" class="rv">
+            <details style="border-bottom:1px solid var(--divider);padding:20px 0">
+                <summary style="font-size:17px;font-weight:600;cursor:pointer;list-style:none;color:var(--text-primary)">Is Pico AI really free?</summary>
+                <p style="margin-top:12px;font-size:15px;color:var(--text-tertiary);line-height:1.6">Yes. Pico AI &mdash; including text, photo analysis, and voice input &mdash; is completely free for all users. It runs on-device using Apple's Foundation Models, so there are no server costs to pass on to you.</p>
+            </details>
+            <details style="border-bottom:1px solid var(--divider);padding:20px 0">
+                <summary style="font-size:17px;font-weight:600;cursor:pointer;list-style:none;color:var(--text-primary)">Can I cancel my subscription anytime?</summary>
+                <p style="margin-top:12px;font-size:15px;color:var(--text-tertiary);line-height:1.6">Absolutely. You can cancel through your Apple ID settings at any time. You'll keep access to premium features until the end of your billing period.</p>
+            </details>
+            <details style="border-bottom:1px solid var(--divider);padding:20px 0">
+                <summary style="font-size:17px;font-weight:600;cursor:pointer;list-style:none;color:var(--text-primary)">Do subscriptions affect clinic rankings?</summary>
+                <p style="margin-top:12px;font-size:15px;color:var(--text-tertiary);line-height:1.6">Never. Dentravo+ subscriptions give you personal tools like benefit tracking and cost estimates. They have zero impact on how clinics are ranked or displayed. Trust and transparency are fundamental to everything we do.</p>
+            </details>
+            <details style="border-bottom:1px solid var(--divider);padding:20px 0">
+                <summary style="font-size:17px;font-weight:600;cursor:pointer;list-style:none;color:var(--text-primary)">What iOS version do I need?</summary>
+                <p style="margin-top:12px;font-size:15px;color:var(--text-tertiary);line-height:1.6">Dentravo requires iOS 26 or later. Pico AI's on-device features require an iPhone with Apple Intelligence support.</p>
+            </details>
+        </div>
     </div>
-    <div style="max-width: 680px; margin: 0 auto;">
-        <details style="border-bottom: 1px solid var(--gray-200); padding: 20px 0;">
-            <summary style="font-size: 17px; font-weight: 600; cursor: pointer; list-style: none;">Is Pico AI really free?</summary>
-            <p style="margin-top: 12px; font-size: 15px; color: var(--gray-600); line-height: 1.6;">Yes. Pico AI &mdash; including text, photo analysis, and voice input &mdash; is completely free for all users. It runs on-device using Apple's Foundation Models, so there are no server costs to pass on to you.</p>
-        </details>
-        <details style="border-bottom: 1px solid var(--gray-200); padding: 20px 0;">
-            <summary style="font-size: 17px; font-weight: 600; cursor: pointer; list-style: none;">Can I cancel my subscription anytime?</summary>
-            <p style="margin-top: 12px; font-size: 15px; color: var(--gray-600); line-height: 1.6;">Absolutely. You can cancel through your Apple ID settings at any time. You'll keep access to premium features until the end of your billing period.</p>
-        </details>
-        <details style="border-bottom: 1px solid var(--gray-200); padding: 20px 0;">
-            <summary style="font-size: 17px; font-weight: 600; cursor: pointer; list-style: none;">Do subscriptions affect clinic rankings?</summary>
-            <p style="margin-top: 12px; font-size: 15px; color: var(--gray-600); line-height: 1.6;">Never. Dentravo+ subscriptions give you personal tools like benefit tracking and cost estimates. They have zero impact on how clinics are ranked or displayed. Trust and transparency are fundamental to everything we do.</p>
-        </details>
-        <details style="border-bottom: 1px solid var(--gray-200); padding: 20px 0;">
-            <summary style="font-size: 17px; font-weight: 600; cursor: pointer; list-style: none;">What iOS version do I need?</summary>
-            <p style="margin-top: 12px; font-size: 15px; color: var(--gray-600); line-height: 1.6;">Dentravo requires iOS 26 or later. Pico AI's on-device features require an iPhone with Apple Intelligence support.</p>
-        </details>
-    </div>
-</div>
+</section>
 
-<div class="cta-banner">
-    <h2>Start for free, upgrade when you're ready</h2>
-    <p>No credit card required. Download and start finding trusted dentists today.</p>
-    <a href="#download" class="btn btn-gradient">Download for iOS</a>
-</div>
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-glow"></div>
+    <h2 class="rv">Start for free, upgrade <span class="grad">when you're ready</span></h2>
+    <p class="rv">No credit card required. Download and start finding trusted dentists today.</p>
+    <div class="rv" style="position:relative;z-index:1"><a href="#download" class="btn btn-accent">Download for iOS</a></div>
+</section>
 
 <footer class="footer">
     <div class="footer-inner">
-        <div class="footer-brand">
-            <div class="footer-logo">Dentravo</div>
-            <p>Dental care, made transparent. Find trusted dentists, verify insurance, and get AI-powered guidance.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Product</h4>
-            <a href="/features">Features</a>
-            <a href="/pricing">Pricing</a>
-            <a href="/marketplace">For Clinics</a>
-        </div>
-        <div class="footer-col">
-            <h4>Resources</h4>
-            <a href="/blog/">Blog</a>
-            <a href="mailto:support@dentravo.com">Support</a>
-            <a href="mailto:hello@dentravo.com">Contact</a>
-        </div>
-        <div class="footer-col">
-            <h4>Legal</h4>
-            <a href="/privacy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms of Service</a>
-        </div>
+        <div class="footer-brand"><div class="footer-brand-name">Dentravo</div><p>Dental care, made transparent. The platform where trust comes first.</p></div>
+        <div class="footer-col"><h4>Product</h4><a href="/features">Features</a><a href="/pricing">Pricing</a><a href="/marketplace">Enterprise</a><a href="#download">Download</a></div>
+        <div class="footer-col"><h4>Resources</h4><a href="/blog/">Blog</a><a href="mailto:support@dentravo.com">Support</a><a href="mailto:hello@dentravo.com">Contact</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="mailto:legal@dentravo.com">Legal</a></div>
     </div>
-    <div class="footer-bottom">&copy; 2026 Dentravo LLC. All rights reserved.</div>
+    <div class="footer-bottom">&copy; 2026 Dentravo LLC. Built in San Diego, California.</div>
 </footer>
 
+<script src="/script.js"></script>
 </body>
 </html>

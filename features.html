@@ -19,171 +19,129 @@
 
 <nav class="nav">
     <div class="nav-inner">
-        <a href="/" class="nav-brand">Dentravo</a>
-        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
+        <a href="/" class="nav-logo">Dentravo</a>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         <div class="nav-links">
             <a href="/features">Features</a>
             <a href="/pricing">Pricing</a>
             <a href="/marketplace">For Clinics</a>
             <a href="/blog/">Blog</a>
-            <a href="#download" class="nav-cta">Download</a>
+            <a href="#download" class="nav-cta">Get the App</a>
         </div>
     </div>
 </nav>
 
-<div class="hero" style="min-height: auto; padding: 140px 24px 80px;">
-    <div class="section-header">
-        <p class="overline">Features</p>
-        <h1>Everything you need for <span class="accent">transparent</span> dental care</h1>
+<section class="hero" style="min-height:auto;padding:140px 24px 80px">
+    <div class="hero-bg"></div>
+    <div class="sec-header" style="position:relative;z-index:1">
+        <span class="overline ol-accent">Features</span>
+        <h1 style="font-size:clamp(36px,6vw,64px)">Everything you need for <span class="grad">transparent</span> dental care</h1>
         <p>Dentravo puts you in control of your dental health with honest information, real tools, and zero hidden agendas.</p>
     </div>
-</div>
+</section>
 
-<div class="section-alt">
-    <div class="section">
-        <div class="split">
-            <div class="split-text">
+<!-- Find Clinics -->
+<section class="sec-full" style="background:linear-gradient(180deg,var(--navy-deep),var(--bg))">
+    <div class="sec" style="padding-top:80px;padding-bottom:80px">
+        <div class="split rv">
+            <div class="split-text rv-l">
                 <h2>Find Clinics You Can Trust</h2>
                 <p>Search for dentists near you with real patient reviews, verified credentials, and transparent pricing. Rankings are never paid &mdash; trust is our moat.</p>
                 <p>Filter by insurance, specialty, distance, ratings, and availability. Every clinic profile shows what matters: real photos, staff bios, services offered, and patient experiences.</p>
             </div>
-            <div class="split-visual">
-                <div class="visual-icon">&#x1F50D;</div>
+            <div class="split-visual rv-r" style="background:linear-gradient(135deg,var(--navy-deep),var(--surface));border-color:rgba(56,189,248,.08)">
+                <div style="font-size:72px">&#x1F50D;</div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="section">
-    <div class="split reverse">
-        <div class="split-text">
-            <h2>Pico AI &mdash; Your Dental Guide</h2>
-            <p>Ask Pico anything about dental health. Snap a photo of your teeth and get instant analysis. Use voice for hands-free questions. All powered by on-device AI &mdash; your data never leaves your phone.</p>
-            <p>Pico provides educational guidance, helps you understand treatment plans, and explains procedures in plain language. Free for everyone, no subscription required.</p>
-        </div>
-        <div class="split-visual">
-            <div class="visual-icon">&#x1F9E0;</div>
+<!-- Pico AI -->
+<section class="sec-full" style="background:linear-gradient(180deg,var(--bg),var(--bg-grouped))">
+    <div class="sec" style="padding-top:80px;padding-bottom:80px">
+        <div class="split flip rv">
+            <div class="split-text rv-r">
+                <h2>Pico AI &mdash; Your Dental Guide</h2>
+                <p>Ask Pico anything about dental health. Snap a photo of your teeth and get instant analysis. Use voice for hands-free questions. All powered by on-device AI &mdash; your data never leaves your phone.</p>
+                <p>Pico provides educational guidance, helps you understand treatment plans, and explains procedures in plain language. Free for everyone, no subscription required.</p>
+            </div>
+            <div class="split-visual rv-l" style="background:linear-gradient(135deg,var(--navy-deep),var(--surface));border-color:rgba(129,140,248,.08)">
+                <div style="font-size:72px">&#x1F9E0;</div>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="section-alt">
-    <div class="section">
-        <div class="split">
-            <div class="split-text">
+<!-- Insurance -->
+<section class="sec-full" style="background:linear-gradient(180deg,var(--bg-grouped),var(--bg))">
+    <div class="sec" style="padding-top:80px;padding-bottom:80px">
+        <div class="split rv">
+            <div class="split-text rv-l">
                 <h2>Insurance Clarity, Instantly</h2>
                 <p>Scan your insurance card and instantly see which clinics accept your plan. No more phone tag with insurance companies. No more surprise bills.</p>
                 <p>Dentravo+ subscribers get the Benefit Tracker &mdash; monitor remaining benefits, see cost estimates for procedures, and get notified before your benefits expire.</p>
             </div>
-            <div class="split-visual">
-                <div class="visual-icon">&#x1F4B3;</div>
+            <div class="split-visual rv-r" style="background:linear-gradient(135deg,var(--navy-deep),var(--surface));border-color:rgba(251,191,36,.08)">
+                <div style="font-size:72px">&#x1F4B3;</div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="section">
-    <div class="split reverse">
-        <div class="split-text">
-            <h2>Book Appointments Instantly</h2>
-            <p>Request appointments directly through the app. Get confirmations, reminders, and automatic calendar integration. No phone calls needed.</p>
-        </div>
-        <div class="split-visual">
-            <div class="visual-icon">&#x1F4C5;</div>
+<!-- Booking -->
+<section class="sec-full" style="background:linear-gradient(180deg,var(--bg),var(--bg-grouped))">
+    <div class="sec" style="padding-top:80px;padding-bottom:80px">
+        <div class="split flip rv">
+            <div class="split-text rv-r">
+                <h2>Book Appointments Instantly</h2>
+                <p>Request appointments directly through the app. Get confirmations, reminders, and automatic calendar integration. No phone calls needed.</p>
+            </div>
+            <div class="split-visual rv-l" style="background:linear-gradient(135deg,var(--navy-deep),var(--surface));border-color:rgba(52,211,153,.08)">
+                <div style="font-size:72px">&#x1F4C5;</div>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="section-alt">
-    <div class="section">
-        <div class="section-header">
-            <p class="overline">All Features</p>
+<!-- All Features Grid -->
+<section class="sec-full" style="background:linear-gradient(180deg,var(--bg-grouped),var(--bg))">
+    <div class="sec">
+        <div class="sec-header rv">
+            <span class="overline ol-info">All Features</span>
             <h2>Built for patients who want the full picture</h2>
         </div>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="icon">&#x1F50D;</div>
-                <h3>Clinic Search</h3>
-                <p>Find dentists by location, insurance, specialty, and real reviews.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">&#x1F9E0;</div>
-                <h3>Pico AI</h3>
-                <p>On-device dental AI with text, photo, and voice support. Always free.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">&#x1F4B3;</div>
-                <h3>Insurance Verification</h3>
-                <p>Scan your card and see accepted clinics instantly.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">&#x1F4C5;</div>
-                <h3>Instant Booking</h3>
-                <p>Request appointments and get calendar integration.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">&#x2B50;</div>
-                <h3>Verified Reviews</h3>
-                <p>Real patient reviews with verified visit history. No fakes.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">&#x1F4CA;</div>
-                <h3>Benefit Tracker</h3>
-                <p>Monitor remaining insurance benefits and get expiration alerts.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">&#x1F4B0;</div>
-                <h3>Cost Estimates</h3>
-                <p>See estimated costs for procedures before you visit.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">&#x1F9D8;</div>
-                <h3>Anxiety Toolkit</h3>
-                <p>Breathing exercises, calming guides, and appointment prep tools.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">&#x1F46A;</div>
-                <h3>Family Dashboard</h3>
-                <p>Manage dental care for up to 5 family members in one place.</p>
-            </div>
+        <div class="card-grid">
+            <div class="card rv d1"><div class="card-icon ic-info">&#x1F50D;</div><h3>Clinic Search</h3><p>Find dentists by location, insurance, specialty, and real reviews.</p></div>
+            <div class="card rv d2"><div class="card-icon ic-accent">&#x1F9E0;</div><h3>Pico AI</h3><p>On-device dental AI with text, photo, and voice support. Always free.</p></div>
+            <div class="card rv d3"><div class="card-icon ic-warning">&#x1F4B3;</div><h3>Insurance Verification</h3><p>Scan your card and see accepted clinics instantly.</p></div>
+            <div class="card rv d4"><div class="card-icon ic-success">&#x1F4C5;</div><h3>Instant Booking</h3><p>Request appointments and get calendar integration.</p></div>
+            <div class="card rv d5"><div class="card-icon ic-warning">&#x2B50;</div><h3>Verified Reviews</h3><p>Real patient reviews with verified visit history. No fakes.</p></div>
+            <div class="card rv d6"><div class="card-icon ic-info">&#x1F4CA;</div><h3>Benefit Tracker</h3><p>Monitor remaining insurance benefits and get expiration alerts.</p></div>
+            <div class="card rv d1"><div class="card-icon ic-success">&#x1F4B0;</div><h3>Cost Estimates</h3><p>See estimated costs for procedures before you visit.</p></div>
+            <div class="card rv d2"><div class="card-icon ic-danger">&#x1F9D8;</div><h3>Anxiety Toolkit</h3><p>Breathing exercises, calming guides, and appointment prep tools.</p></div>
+            <div class="card rv d3"><div class="card-icon ic-accent">&#x1F46A;</div><h3>Family Dashboard</h3><p>Manage dental care for up to 5 family members in one place.</p></div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="cta-banner">
-    <h2>Ready for transparent dental care?</h2>
-    <p>Download Dentravo and take control of your dental health today.</p>
-    <a href="#download" class="btn btn-gradient">Download for iOS</a>
-</div>
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-glow"></div>
+    <h2 class="rv">Ready for <span class="grad">transparent</span> dental care?</h2>
+    <p class="rv">Download Dentravo and take control of your dental health today.</p>
+    <div class="rv" style="position:relative;z-index:1"><a href="#download" class="btn btn-accent">Download for iOS</a></div>
+</section>
 
 <footer class="footer">
     <div class="footer-inner">
-        <div class="footer-brand">
-            <div class="footer-logo">Dentravo</div>
-            <p>Dental care, made transparent. Find trusted dentists, verify insurance, and get AI-powered guidance.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Product</h4>
-            <a href="/features">Features</a>
-            <a href="/pricing">Pricing</a>
-            <a href="/marketplace">For Clinics</a>
-        </div>
-        <div class="footer-col">
-            <h4>Resources</h4>
-            <a href="/blog/">Blog</a>
-            <a href="mailto:support@dentravo.com">Support</a>
-            <a href="mailto:hello@dentravo.com">Contact</a>
-        </div>
-        <div class="footer-col">
-            <h4>Legal</h4>
-            <a href="/privacy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms of Service</a>
-        </div>
+        <div class="footer-brand"><div class="footer-brand-name">Dentravo</div><p>Dental care, made transparent. The platform where trust comes first.</p></div>
+        <div class="footer-col"><h4>Product</h4><a href="/features">Features</a><a href="/pricing">Pricing</a><a href="/marketplace">Enterprise</a><a href="#download">Download</a></div>
+        <div class="footer-col"><h4>Resources</h4><a href="/blog/">Blog</a><a href="mailto:support@dentravo.com">Support</a><a href="mailto:hello@dentravo.com">Contact</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="mailto:legal@dentravo.com">Legal</a></div>
     </div>
-    <div class="footer-bottom">&copy; 2026 Dentravo LLC. All rights reserved.</div>
+    <div class="footer-bottom">&copy; 2026 Dentravo LLC. Built in San Diego, California.</div>
 </footer>
 
+<script src="/script.js"></script>
 </body>
 </html>
