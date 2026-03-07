@@ -1,4 +1,4 @@
-// ===== DENTRAVO V7 — OPTIMIZED =====
+// ===== DENTRAVO V8 — ELEVATED =====
 (function() {
     'use strict';
 
@@ -56,10 +56,11 @@
         }
     }, { passive: true });
 
-    // Mobile nav
+    // Mobile nav (hamburger to X)
     var toggle = document.querySelector('.nav-toggle');
     if (toggle) {
         toggle.addEventListener('click', function() {
+            toggle.classList.toggle('active');
             document.querySelector('.nav-links').classList.toggle('open');
         });
     }

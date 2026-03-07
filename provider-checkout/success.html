@@ -140,7 +140,7 @@
         <div class="step-text">Complete your profile for maximum visibility</div>
       </div>
     </div>
-    <a href="brightbite://provider" class="cta">Open Dentravo App</a>
+    <a href="dentravo://provider" class="cta">Open Dentravo App</a>
     <p class="footer">
       Questions? Contact <a href="mailto:support@dentravo.com">support@dentravo.com</a>
     </p>
@@ -149,9 +149,6 @@
     // Extract session_id from URL params for reference
     const params = new URLSearchParams(window.location.search);
     const sessionId = params.get('session_id');
-    if (sessionId) {
-      console.log('Checkout session:', sessionId);
-    }
   </script>
 </body>
 </html>
