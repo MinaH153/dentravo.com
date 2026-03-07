@@ -38,8 +38,9 @@
 <section class="hero" id="top">
     <div class="hero-bg"></div>
 
-    <h1>Dental care, made <span class="grad">transparent.</span></h1>
-    <p class="subtitle">Find trusted dentists. Verify insurance instantly. Get AI-powered guidance &mdash; completely free and private.</p>
+    <div class="hero-overline"><span class="pulse-dot"></span> Launching San Diego 2026</div>
+    <h1>Dental care,<br>made <span class="grad">transparent.</span></h1>
+    <p class="subtitle">Find trusted dentists. Verify insurance instantly. Get AI-powered guidance — completely free and private.</p>
 
     <div class="btn-row">
         <a href="#download" class="btn btn-accent" id="download">
@@ -48,18 +49,32 @@
         </a>
         <a href="#for-clinics" class="btn btn-ghost">For Clinics</a>
     </div>
-    <p class="meta">Launching San Diego &middot; 2026 &middot; iOS 26+</p>
+
+    <div class="trust-row">
+        <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            On-device AI
+        </div>
+        <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            Zero tracking
+        </div>
+        <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            No paid rankings
+        </div>
+    </div>
 
     <!-- Pico -->
     <div class="pico-fairy">
-        <svg viewBox="0 0 300 340" width="160" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 300 340" width="180" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="tooth-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="50%" stop-color="#F8FAFC"/><stop offset="100%" stop-color="#CBD5E1"/></linearGradient>
                 <linearGradient id="wing-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#818CF8" stop-opacity=".4"/><stop offset="100%" stop-color="#38BDF8" stop-opacity=".1"/></linearGradient>
                 <linearGradient id="wand-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FBBF24"/><stop offset="100%" stop-color="#F59E0B"/></linearGradient>
                 <linearGradient id="star-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#38BDF8"/></linearGradient>
                 <filter id="glow"><feGaussianBlur stdDeviation="3" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-                <filter id="soft-shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity=".2"/></filter>
+                <filter id="soft-shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity=".15"/></filter>
             </defs>
             <g class="pico-sparkle" style="transform-origin:150px 150px"><circle cx="210" cy="60" r="4" fill="url(#star-grad)" opacity=".7"/></g>
             <g class="pico-sparkle-2" style="transform-origin:150px 150px"><circle cx="80" cy="50" r="3" fill="#FBBF24" opacity=".5"/></g>
@@ -88,73 +103,121 @@
 </section>
 
 <!-- ====== STATS ====== -->
-<section class="sec-full" style="background:var(--navy-deep)">
-    <div class="sec">
-        <div class="stats-grid rv">
-            <div class="stat"><div class="stat-num"><span data-count="150" data-prefix="$" data-suffix="B">$0</span></div><div class="stat-label">In dental benefits wasted yearly</div></div>
+<section class="sec-full" style="background:var(--bg)">
+    <div class="sec" style="padding-top:40px;padding-bottom:40px">
+        <div class="stats-strip rv">
+            <div class="stat"><div class="stat-num"><span data-count="150" data-prefix="$" data-suffix="B">$0</span></div><div class="stat-label">Benefits wasted yearly</div></div>
             <div class="stat"><div class="stat-num"><span data-count="74" data-suffix="%">0%</span></div><div class="stat-label">Of adults fear the dentist</div></div>
-            <div class="stat"><div class="stat-num"><span data-count="40" data-suffix="%">0%</span></div><div class="stat-label">Delay care due to cost confusion</div></div>
-            <div class="stat"><div class="stat-num"><span data-count="0">0</span></div><div class="stat-label">Platforms patients can trust</div></div>
+            <div class="stat"><div class="stat-num"><span data-count="40" data-suffix="%">0%</span></div><div class="stat-label">Delay care over cost</div></div>
+            <div class="stat"><div class="stat-num"><span data-count="0">0</span></div><div class="stat-label">Platforms you can trust</div></div>
         </div>
     </div>
 </section>
 
-<!-- ====== WHAT DENTRAVO DOES ====== -->
-<section class="sec-full">
+<div class="sec-divider"></div>
+
+<!-- ====== FEATURES ====== -->
+<section class="sec-full" style="position:relative">
+    <div class="ambient-orb ambient-orb-1"></div>
     <div class="sec">
         <div class="sec-header rv">
-            <h2>Everything you need to take control of your dental health.</h2>
+            <span class="overline ol-accent">Features</span>
+            <h2>Everything you need to take control of your <span class="grad">dental health.</span></h2>
         </div>
-        <div class="card-grid">
-            <div class="card rv d1"><div class="card-icon ic-info">&#x1F50D;</div><h3>Find Trusted Clinics</h3><p>Real reviews, verified credentials, transparent pricing. Rankings are never paid or sponsored.</p></div>
-            <div class="card rv d2"><div class="card-icon ic-accent">&#x1F9E0;</div><h3>Pico AI Assistant</h3><p>On-device dental AI. Ask anything, snap a photo, use voice. 100% free, 100% private.</p></div>
-            <div class="card rv d3"><div class="card-icon ic-warning">&#x1F4B3;</div><h3>Insurance Clarity</h3><p>Scan your card, see accepted clinics instantly. Track benefits before they expire.</p></div>
-            <div class="card rv d4"><div class="card-icon ic-success">&#x1F4C5;</div><h3>Instant Booking</h3><p>Request appointments, get confirmations, auto-sync to calendar. No more phone calls.</p></div>
-            <div class="card rv d5"><div class="card-icon ic-warning">&#x2B50;</div><h3>Verified Reviews</h3><p>Real patients, real visits, real feedback. AI moderation catches fakes.</p></div>
-            <div class="card rv d6"><div class="card-icon ic-danger">&#x1F9D8;</div><h3>Anxiety Toolkit</h3><p>Breathing exercises, calming guides, and appointment prep tools.</p></div>
+        <div class="card-grid rv">
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </div>
+                <h3>Find Trusted Clinics</h3>
+                <p>Real reviews, verified credentials, transparent pricing. Rankings are never paid or sponsored.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><path d="M12 2a4 4 0 014 4v1a2 2 0 012 2v1a2 2 0 01-2 2h-1"/><path d="M8 2a4 4 0 00-4 4v1a2 2 0 00-2 2v1a2 2 0 002 2h1"/><path d="M12 14v4"/><circle cx="12" cy="21" r="1"/><path d="M8 10h8"/></svg>
+                </div>
+                <h3>Pico AI Assistant</h3>
+                <p>On-device dental AI. Ask anything, snap a photo, use voice. 100% free, 100% private.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg>
+                </div>
+                <h3>Insurance Clarity</h3>
+                <p>Scan your card, see accepted clinics instantly. Track benefits before they expire.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+                </div>
+                <h3>Instant Booking</h3>
+                <p>Request appointments, get confirmations, auto-sync to calendar. No more phone calls.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <h3>Verified Reviews</h3>
+                <p>Real patients, real visits, real feedback. AI moderation catches fakes automatically.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                </div>
+                <h3>Anxiety Toolkit</h3>
+                <p>Breathing exercises, calming guides, and appointment prep tools for dental anxiety.</p>
+            </div>
         </div>
-        <div style="text-align:center;margin-top:40px" class="rv"><a href="/features" class="btn btn-ghost">Explore All Features</a></div>
+        <div style="text-align:center;margin-top:48px" class="rv"><a href="/features" class="btn btn-ghost">Explore All Features</a></div>
     </div>
 </section>
 
+<div class="sec-divider"></div>
+
 <!-- ====== TRUST ====== -->
-<section class="sec-full" style="background:var(--bg-grouped)">
+<section class="sec-full" style="position:relative">
+    <div class="ambient-orb ambient-orb-2"></div>
     <div class="sec">
         <div class="split rv">
             <div class="split-text rv-l">
-                <h2>Built on trust. Not ads.</h2>
-                <p>Every other platform lets clinics pay for placement. We refuse. Rankings run on verified patient reviews, clinical credentials, and responsiveness &mdash; never advertising dollars.</p>
-                <p>Subscriptions never influence how clinics appear. This is non-negotiable.</p>
-                <div class="checklist" style="margin-top:16px">
-                    <div class="ck"><div class="ck-dot" style="background:var(--success-tonal)"><svg fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>Only verified patient reviews count</div>
-                    <div class="ck"><div class="ck-dot" style="background:var(--success-tonal)"><svg fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>AI moderation removes fakes</div>
-                    <div class="ck"><div class="ck-dot" style="background:var(--success-tonal)"><svg fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>HIPAA-conscious, on-device AI</div>
-                    <div class="ck"><div class="ck-dot" style="background:var(--success-tonal)"><svg fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>AES-256 encryption, zero tracking</div>
+                <span class="overline ol-success">Trust</span>
+                <h2>Built on trust.<br>Not ads.</h2>
+                <p>Every other platform lets clinics pay for placement. We refuse. Rankings run on verified patient reviews, clinical credentials, and responsiveness — never advertising dollars.</p>
+                <p style="font-weight:600;color:var(--text-primary)">Subscriptions never influence rankings. Non-negotiable.</p>
+                <div class="checklist" style="margin-top:20px">
+                    <div class="ck"><div class="ck-dot" style="background:var(--success-tonal)"><svg viewBox="0 0 14 14" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>Only verified patient reviews count</div>
+                    <div class="ck"><div class="ck-dot" style="background:var(--success-tonal)"><svg viewBox="0 0 14 14" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>AI moderation removes fakes</div>
+                    <div class="ck"><div class="ck-dot" style="background:var(--success-tonal)"><svg viewBox="0 0 14 14" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>HIPAA-conscious, on-device AI</div>
+                    <div class="ck"><div class="ck-dot" style="background:var(--success-tonal)"><svg viewBox="0 0 14 14" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>AES-256 encryption, zero tracking</div>
                 </div>
             </div>
-            <div class="split-visual rv-r" style="background:linear-gradient(135deg,var(--navy-deep),var(--surface));border-color:rgba(52,211,153,.08)">
-                <svg viewBox="0 0 240 240" width="180"><defs><linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#38BDF8"/></linearGradient></defs><path d="M120 20 L200 60 L200 130 Q200 185 120 220 Q40 185 40 130 L40 60Z" fill="none" stroke="url(#sg)" stroke-width="2" opacity=".5"/><path d="M120 40 L180 70 L180 125 Q180 170 120 200 Q60 170 60 125 L60 70Z" fill="url(#sg)" opacity=".06"/><rect x="102" y="108" width="36" height="30" rx="4" fill="none" stroke="url(#sg)" stroke-width="2.5"/><path d="M110 108V98a10 10 0 0 1 20 0v10" fill="none" stroke="url(#sg)" stroke-width="2.5"/><circle cx="120" cy="122" r="3" fill="url(#sg)"/><line x1="120" y1="125" x2="120" y2="131" stroke="url(#sg)" stroke-width="2"/></svg>
+            <div class="split-visual rv-r">
+                <svg viewBox="0 0 240 240" width="180"><defs><linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#38BDF8"/></linearGradient></defs><path d="M120 20 L200 60 L200 130 Q200 185 120 220 Q40 185 40 130 L40 60Z" fill="none" stroke="url(#sg)" stroke-width="2" opacity=".5"/><path d="M120 40 L180 70 L180 125 Q180 170 120 200 Q60 170 60 125 L60 70Z" fill="url(#sg)" opacity=".06"/><rect x="102" y="108" width="36" height="30" rx="4" fill="none" stroke="url(#sg)" stroke-width="2.5"/><path d="M110 108V98a10 10 0 0 1 20 0v10" fill="none" stroke="url(#sg)" stroke-width="2.5"/><circle cx="120" cy="122" r="3" fill="url(#sg)"/><line x1="120" y1="125" x2="120" y2="131" stroke="url(#sg)" stroke-width="2"/></svg>
             </div>
         </div>
     </div>
 </section>
 
+<div class="sec-divider"></div>
+
 <!-- ====== FOR CLINICS ====== -->
-<section class="sec-full" id="for-clinics">
+<section class="sec-full" id="for-clinics" style="position:relative">
+    <div class="ambient-orb ambient-orb-3" style="opacity:.3"></div>
     <div class="sec">
         <div class="split flip rv">
             <div class="split-text rv-r">
-                <h2>Dentravo is your clinic's app.</h2>
-                <p>Stop spending $50K on a custom app nobody downloads. When patients select your clinic, you get direct messaging, push notifications, digital check-in, loyalty programs, and analytics &mdash; all inside the app they already use.</p>
-                <div class="checklist" style="margin-top:16px">
-                    <div class="ck"><div class="ck-dot" style="background:var(--accent-tonal)"><svg fill="none" stroke="#818CF8" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>Direct patient messaging</div>
-                    <div class="ck"><div class="ck-dot" style="background:var(--accent-tonal)"><svg fill="none" stroke="#818CF8" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>Push notifications &amp; smart recall</div>
-                    <div class="ck"><div class="ck-dot" style="background:var(--accent-tonal)"><svg fill="none" stroke="#818CF8" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>Digital check-in, booking, rewards</div>
-                    <div class="ck"><div class="ck-dot" style="background:var(--accent-tonal)"><svg fill="none" stroke="#818CF8" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>Practice analytics &amp; review management</div>
+                <span class="overline ol-accent">For Clinics</span>
+                <h2>Dentravo is your<br>clinic's app.</h2>
+                <p>Stop spending $50K on a custom app nobody downloads. When patients select your clinic, you get direct messaging, push notifications, digital check-in, loyalty programs, and analytics — all inside the app they already use.</p>
+                <div class="checklist" style="margin-top:20px">
+                    <div class="ck"><div class="ck-dot" style="background:var(--accent-tonal)"><svg viewBox="0 0 14 14" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>Direct patient messaging</div>
+                    <div class="ck"><div class="ck-dot" style="background:var(--accent-tonal)"><svg viewBox="0 0 14 14" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>Push notifications &amp; smart recall</div>
+                    <div class="ck"><div class="ck-dot" style="background:var(--accent-tonal)"><svg viewBox="0 0 14 14" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>Digital check-in, booking, rewards</div>
+                    <div class="ck"><div class="ck-dot" style="background:var(--accent-tonal)"><svg viewBox="0 0 14 14" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><polyline points="2 7 5 10 12 3"/></svg></div>Practice analytics &amp; review management</div>
                 </div>
-                <div style="margin-top:24px"><a href="/marketplace" class="btn btn-accent">Learn More</a></div>
+                <div style="margin-top:28px"><a href="/marketplace" class="btn btn-accent">Learn More</a></div>
             </div>
-            <div class="split-visual rv-l" style="background:linear-gradient(135deg,var(--navy-deep),var(--surface));border-color:rgba(129,140,248,.08)">
+            <div class="split-visual rv-l">
                 <svg viewBox="0 0 240 240" width="180"><defs><linearGradient id="cg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#38BDF8"/></linearGradient></defs>
                 <rect x="60" y="40" width="120" height="80" rx="12" fill="none" stroke="url(#cg2)" stroke-width="1.5" opacity=".4"/>
                 <rect x="75" y="58" width="60" height="8" rx="4" fill="url(#cg2)" opacity=".2"/>
@@ -172,14 +235,19 @@
     </div>
 </section>
 
+<div class="sec-divider"></div>
+
 <!-- ====== HOW IT WORKS ====== -->
-<section class="sec-full" style="background:var(--bg-grouped)">
+<section class="sec-full">
     <div class="sec">
-        <div class="sec-header rv"><h2>From download to dentist in minutes.</h2></div>
+        <div class="sec-header rv">
+            <span class="overline ol-info">How It Works</span>
+            <h2>From download to dentist<br>in <span class="grad">minutes.</span></h2>
+        </div>
         <div class="steps rv">
-            <div class="step"><div class="step-num">1</div><h3>Download Free</h3><p>Get Dentravo from the App Store. No credit card required.</p></div>
-            <div class="step"><div class="step-num">2</div><h3>Find Your Dentist</h3><p>Search by location, insurance, specialty. No sponsored results.</p></div>
-            <div class="step"><div class="step-num">3</div><h3>Book &amp; Thrive</h3><p>Request appointment, track benefits. Never waste coverage again.</p></div>
+            <div class="step d1"><div class="step-num">1</div><h3>Download Free</h3><p>Get Dentravo from the App Store. No credit card, no signup wall.</p></div>
+            <div class="step d2"><div class="step-num">2</div><h3>Find Your Dentist</h3><p>Search by location, insurance, specialty. Zero sponsored results, ever.</p></div>
+            <div class="step d3"><div class="step-num">3</div><h3>Book &amp; Thrive</h3><p>Request appointment, track benefits. Never waste coverage again.</p></div>
         </div>
     </div>
 </section>
@@ -189,18 +257,18 @@
     <div class="cta-glow"></div>
     <h2 class="rv">The future of dental care<br>starts with <span class="grad">trust.</span></h2>
     <p class="rv">Download Dentravo. Find a dentist you can believe in.</p>
-    <div class="rv" style="position:relative;z-index:1"><a href="#download" class="btn btn-accent" style="font-size:16px;padding:18px 44px">Download for iOS</a></div>
-    <p class="rv" style="margin-top:16px;font-size:12px;color:var(--text-tertiary);opacity:.4;position:relative;z-index:1">Coming soon &middot; iOS 26+ &middot; San Diego first</p>
+    <div class="rv" style="position:relative;z-index:1"><a href="#download" class="btn btn-accent" style="font-size:16px;padding:18px 48px">Download for iOS</a></div>
+    <p class="rv" style="margin-top:20px;font-size:12px;color:var(--text-tertiary);opacity:.35;position:relative;z-index:1;letter-spacing:1.5px;text-transform:uppercase">Coming soon &middot; iOS 26+ &middot; San Diego first</p>
 </section>
 
 <!-- ====== LEGAL ====== -->
 <div class="legal-strip">
-    <p><strong style="color:var(--text-tertiary)">Disclaimers:</strong> Dentravo is not a healthcare provider and does not provide medical or dental advice. Pico AI provides educational information only and is not a substitute for professional dental care. Always consult a licensed dentist. Insurance verification is informational and may not reflect real-time coverage. Dentravo is designed with HIPAA principles in mind but is not a covered entity under HIPAA. Benefit estimates are approximate. Rankings are never influenced by payments or subscriptions. <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms of Service</a></p>
+    <p><strong>Disclaimers:</strong> Dentravo is not a healthcare provider and does not provide medical or dental advice. Pico AI provides educational information only and is not a substitute for professional dental care. Always consult a licensed dentist. Insurance verification is informational and may not reflect real-time coverage. Rankings are never influenced by payments or subscriptions. <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms of Service</a></p>
 </div>
 
 <footer class="footer">
     <div class="footer-inner">
-        <div class="footer-brand"><div class="footer-brand-name">Dentravo</div><p>Dental care, made transparent.</p></div>
+        <div class="footer-brand"><div class="footer-brand-name">Dentravo</div><p>Dental care, made transparent.<br>The platform where trust comes first.</p></div>
         <div class="footer-col"><h4>Product</h4><a href="/features">Features</a><a href="/pricing">Pricing</a><a href="/marketplace">For Clinics</a></div>
         <div class="footer-col"><h4>Resources</h4><a href="/blog/">Blog</a><a href="mailto:support@dentravo.com">Support</a><a href="mailto:hello@dentravo.com">Contact</a></div>
         <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
