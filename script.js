@@ -1,32 +1,26 @@
-// ===== DENTRAVO V6 — LIGHT/DARK + CONVENIENCE =====
+// ===== DENTRAVO V7 — OPTIMIZED =====
 (function() {
     'use strict';
 
-    // ===== THEME TOGGLE =====
-    const html = document.documentElement;
-    const saved = localStorage.getItem('dentravo-theme');
-    if (saved === 'dark') {
-        html.setAttribute('data-theme', 'dark');
-    }
-    // Update toggle button state
+    // Theme (inline script in <head> handles initial apply)
+    var html = document.documentElement;
     function updateToggleUI() {
-        const isDark = html.getAttribute('data-theme') === 'dark';
-        document.querySelectorAll('.theme-toggle').forEach(btn => {
-            const moon = btn.querySelector('.theme-icon-moon');
-            const sun = btn.querySelector('.theme-icon-sun');
-            const label = btn.querySelector('.theme-label');
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        document.querySelectorAll('.theme-toggle').forEach(function(btn) {
+            var moon = btn.querySelector('.theme-icon-moon');
+            var sun = btn.querySelector('.theme-icon-sun');
+            var label = btn.querySelector('.theme-label');
             if (moon) moon.style.display = isDark ? 'none' : 'block';
             if (sun) sun.style.display = isDark ? 'block' : 'none';
             if (label) label.textContent = isDark ? 'Light Mode' : 'Dark Mode';
         });
     }
-    // Initialize on load
     updateToggleUI();
-    // Listen for clicks
-    document.addEventListener('click', (e) => {
-        const btn = e.target.closest('.theme-toggle');
+
+    document.addEventListener('click', function(e) {
+        var btn = e.target.closest('.theme-toggle');
         if (!btn) return;
-        const isDark = html.getAttribute('data-theme') === 'dark';
+        var isDark = html.getAttribute('data-theme') === 'dark';
         if (isDark) {
             html.removeAttribute('data-theme');
             localStorage.setItem('dentravo-theme', 'light');
@@ -37,62 +31,76 @@
         updateToggleUI();
     });
 
-    // ===== SCROLL REVEAL =====
-    const obs = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+    // Scroll reveal (unobserve after visible for perf)
+    var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+            if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); }
+        });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.rv,.rv-l,.rv-r,.rv-s').forEach(el => obs.observe(el));
+    document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(function(el) { obs.observe(el); });
 
-    // ===== NAV SCROLL =====
-    const nav = document.querySelector('.nav');
-    window.addEventListener('scroll', () => {
-        nav?.classList.toggle('scrolled', window.scrollY > 60);
+    // Single scroll handler (nav + back-to-top)
+    var nav = document.querySelector('.nav');
+    var topBtn = document.querySelector('.back-to-top');
+    var lastScrollY = 0;
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+        lastScrollY = window.scrollY;
+        if (!ticking) {
+            requestAnimationFrame(function() {
+                if (nav) nav.classList.toggle('scrolled', lastScrollY > 60);
+                if (topBtn) topBtn.classList.toggle('show', lastScrollY > 400);
+                ticking = false;
+            });
+            ticking = true;
+        }
     }, { passive: true });
 
-    // ===== MOBILE NAV =====
-    document.querySelector('.nav-toggle')?.addEventListener('click', () => {
-        document.querySelector('.nav-links')?.classList.toggle('open');
-    });
+    // Mobile nav
+    var toggle = document.querySelector('.nav-toggle');
+    if (toggle) {
+        toggle.addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        });
+    }
 
-    // ===== ANIMATED COUNTERS =====
+    // Animated counters
     function animateCounter(el) {
-        const raw = el.getAttribute('data-count');
-        const pre = el.getAttribute('data-prefix') || '';
-        const suf = el.getAttribute('data-suffix') || '';
-        const target = parseFloat(raw);
-        if (isNaN(target)) { el.textContent = raw; return; }
-        const dur = 2200;
-        const start = performance.now();
+        var target = parseFloat(el.getAttribute('data-count'));
+        var pre = el.getAttribute('data-prefix') || '';
+        var suf = el.getAttribute('data-suffix') || '';
+        if (isNaN(target)) { el.textContent = el.getAttribute('data-count'); return; }
+        var start = performance.now();
         function tick(now) {
-            const p = Math.min((now - start) / dur, 1);
-            const eased = 1 - Math.pow(1 - p, 4);
-            el.textContent = pre + Math.round(target * eased).toLocaleString() + suf;
+            var p = Math.min((now - start) / 2200, 1);
+            el.textContent = pre + Math.round(target * (1 - Math.pow(1 - p, 4))).toLocaleString() + suf;
             if (p < 1) requestAnimationFrame(tick);
         }
         requestAnimationFrame(tick);
     }
-    const cObs = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); cObs.unobserve(e.target); } });
+    var cObs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if (e.isIntersecting) { animateCounter(e.target); cObs.unobserve(e.target); } });
     }, { threshold: 0.5 });
-    document.querySelectorAll('[data-count]').forEach(el => cObs.observe(el));
+    document.querySelectorAll('[data-count]').forEach(function(el) { cObs.observe(el); });
 
-    // ===== SMOOTH ANCHOR SCROLL =====
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', (e) => {
-            const id = a.getAttribute('href');
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+            var id = a.getAttribute('href');
             if (id === '#') return;
-            const t = document.querySelector(id);
-            if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); document.querySelector('.nav-links')?.classList.remove('open'); }
+            var t = document.querySelector(id);
+            if (t) {
+                e.preventDefault();
+                t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                var navLinks = document.querySelector('.nav-links');
+                if (navLinks) navLinks.classList.remove('open');
+            }
         });
     });
 
-    // ===== BACK TO TOP =====
-    const topBtn = document.querySelector('.back-to-top');
+    // Back to top click
     if (topBtn) {
-        window.addEventListener('scroll', () => {
-            topBtn.classList.toggle('show', window.scrollY > 400);
-        }, { passive: true });
-        topBtn.addEventListener('click', () => {
+        topBtn.addEventListener('click', function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
