@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles.css">
     <script async src="https://plausible.io/js/pa-jWqeXMhNwO8-eJGYg1QFV.js"></script>
     <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+    <script>if(localStorage.getItem('dentravo-theme')==='dark')document.documentElement.setAttribute('data-theme','dark')</script>
 </head>
 <body>
 
@@ -202,8 +203,19 @@
         <div class="footer-col"><h4>Resources</h4><a href="/blog/">Blog</a><a href="mailto:support@dentravo.com">Support</a><a href="mailto:hello@dentravo.com">Contact</a></div>
         <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
     </div>
-    <div class="footer-bottom">&copy; 2026 Dentravo LLC. San Diego, California.</div>
+    <div class="footer-bottom">
+        <span>&copy; 2026 Dentravo LLC. San Diego, California.</span>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <span class="theme-label">Dark Mode</span>
+        </button>
+    </div>
 </footer>
+
+<button class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Dentravo","operatingSystem":"iOS 26+","applicationCategory":"HealthApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"Dentravo LLC","url":"https://dentravo.com"}}</script>
 <script src="/script.js"></script>
