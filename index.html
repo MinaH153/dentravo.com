@@ -4,30 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dentravo — Dental Care, Made Transparent</title>
-    <meta name="description" content="Find trusted dentists, verify insurance, compare costs, and get AI-powered dental guidance with Pico. Free for iOS.">
-
-    <!-- Open Graph -->
+    <meta name="description" content="Find trusted dentists, verify insurance, compare costs, and get AI-powered dental guidance with Pico. Free, private, HIPAA-conscious. For patients and practices.">
     <meta property="og:title" content="Dentravo — Dental Care, Made Transparent">
-    <meta property="og:description" content="Find trusted dentists, verify insurance, and get free AI dental guidance. Download for iOS.">
+    <meta property="og:description" content="The dental platform that puts trust first. For patients and practices.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dentravo.com">
     <meta property="og:site_name" content="Dentravo">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dentravo — Dental Care, Made Transparent">
     <meta name="twitter:description" content="Find trusted dentists, verify insurance, and get free AI dental guidance.">
-
-    <!-- Apple Smart Banner (replace with real App Store ID when available) -->
     <!-- <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID"> -->
-
-    <!-- Favicon -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="/styles.css">
-
-    <!-- Analytics (Plausible — privacy-first, no cookies, GDPR compliant) -->
     <script async src="https://plausible.io/js/pa-jWqeXMhNwO8-eJGYg1QFV.js"></script>
     <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
 </head>
@@ -37,7 +25,7 @@
 <nav class="nav">
     <div class="nav-inner">
         <a href="/" class="nav-brand">Dentravo</a>
-        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <button class="nav-toggle" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
         <div class="nav-links">
@@ -50,215 +38,483 @@
     </div>
 </nav>
 
-<!-- Hero -->
-<div class="hero">
-    <h1>Dental care, made <span class="accent">transparent</span></h1>
-    <p class="subtitle">Find trusted dentists, verify your insurance instantly, compare real costs, and get AI-powered dental guidance &mdash; all from your phone.</p>
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+    <div class="hero-orbs">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+    </div>
+
+    <h1>The dental industry is <span class="accent">broken.</span><br>We're fixing it.</h1>
+    <p class="subtitle">Paid rankings. Hidden costs. Lost benefits. Patients deserve better. Dentravo brings radical transparency to every dental decision you make.</p>
 
     <div class="btn-group">
         <a href="#download" class="btn btn-primary" id="download">
-            <svg width="20" height="24" viewBox="0 0 20 24" fill="none" style="flex-shrink:0;">
-                <path d="M16.5 8.3c-.1.1-2.9 1.7-2.9 5.1 0 4 3.5 5.4 3.6 5.4-.0.1-.6 1.9-1.9 3.8-1.1 1.6-2.3 3.2-4.1 3.2s-2.3-1.1-4.3-1.1c-2 0-2.7 1.1-4.3 1.1S.4 24.2-.8 22.5C-2.2 20.5-3.3 17.2-3.3 14c0-5.1 3.3-7.8 6.6-7.8 1.7 0 3.2 1.2 4.3 1.2 1 0 2.7-1.2 4.7-1.2.8 0 3.5.1 5.2 2.1zM11.3 4.3C12.1 3.3 12.7 2 12.7.5c0-.2 0-.4-.0-.5-1.2.0-2.7.8-3.6 1.9-.7.8-1.4 2.1-1.4 3.4 0 .2.0.4.1.5.1.0.2.0.3.0 1.1 0 2.5-.8 3.2-1.5z" transform="translate(3.3 0)" fill="currentColor"/>
-            </svg>
+            <svg width="18" height="22" viewBox="0 0 18 22" fill="none"><path d="M14.94 7.47c-.09.07-2.61 1.53-2.61 4.59 0 3.6 3.15 4.86 3.24 4.86-.01.07-.5 1.71-1.71 3.42-.99 1.44-2.07 2.88-3.69 2.88s-2.07-.99-3.87-.99-2.43.99-3.87.99-2.34-1.35-3.51-3.06C-2.43 18.36-3.42 15.39-3.42 12.51c0-4.59 2.97-7.02 5.94-7.02 1.53 0 2.88 1.08 3.87 1.08.9 0 2.43-1.08 4.23-1.08.72 0 3.15.09 4.68 1.89zM10.17 3.87c.72-.9 1.26-2.07 1.26-3.42 0-.18 0-.36-.03-.45-1.08.04-2.43.72-3.24 1.71-.63.72-1.26 1.89-1.26 3.06 0 .18.03.36.05.45.09.01.18.01.27.01.99 0 2.25-.72 2.88-1.35z" transform="translate(2.5 0)" fill="currentColor"/></svg>
             Download for iOS
         </a>
-        <a href="/features" class="btn btn-outline">See Features</a>
+        <a href="#mission" class="btn btn-outline">Our Mission</a>
     </div>
-    <p class="badge">iOS 26+ &middot; On-device AI &middot; Free to use</p>
+    <p class="badge">iOS 26+ &middot; On-device AI &middot; HIPAA-conscious &middot; Free to use</p>
 
     <!-- Device Mockup -->
-    <div style="margin-top: 60px;">
+    <div class="device-wrapper">
+        <div class="device-glow"></div>
         <div class="device-frame">
             <div class="device-screen">
                 <div class="mock-logo">Dentravo</div>
-                <div class="mock-text">Find your dentist</div>
+                <div class="mock-text">San Diego, CA</div>
+                <div class="mock-search">Search clinics, dentists, or services...</div>
                 <div class="mock-cards">
                     <div class="mock-card">
-                        <div class="mock-card-title">Bright Smile Dental</div>
-                        <div class="mock-card-sub">4.9 stars &middot; 0.3 mi &middot; Accepts your plan</div>
+                        <div class="mock-card-row">
+                            <div>
+                                <div class="mock-card-title">Bright Smile Dental</div>
+                                <div class="mock-card-sub">0.3 mi &middot; General &amp; Cosmetic</div>
+                            </div>
+                            <div class="mock-card-rating">4.9</div>
+                        </div>
+                        <span class="mock-pill mock-pill-green">Accepts your plan</span>
                     </div>
                     <div class="mock-card">
-                        <div class="mock-card-title">Pacific Dental Care</div>
-                        <div class="mock-card-sub">4.7 stars &middot; 1.2 mi &middot; Accepts your plan</div>
+                        <div class="mock-card-row">
+                            <div>
+                                <div class="mock-card-title">Pacific Dental Care</div>
+                                <div class="mock-card-sub">1.2 mi &middot; Family Dentistry</div>
+                            </div>
+                            <div class="mock-card-rating">4.7</div>
+                        </div>
+                        <span class="mock-pill mock-pill-green">Accepts your plan</span>
                     </div>
                     <div class="mock-card">
-                        <div class="mock-card-title">San Diego Family Dentistry</div>
-                        <div class="mock-card-sub">4.8 stars &middot; 2.1 mi &middot; Out of network</div>
+                        <div class="mock-card-row">
+                            <div>
+                                <div class="mock-card-title">SD Family Dentistry</div>
+                                <div class="mock-card-sub">2.1 mi &middot; Pediatric</div>
+                            </div>
+                            <div class="mock-card-rating">4.8</div>
+                        </div>
+                        <span class="mock-pill mock-pill-orange">Out of network</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- Stats -->
-<div class="stats-row" style="background: var(--white); padding: 80px 24px;">
-    <div class="stat-item">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Free Pico AI</div>
+<!-- ==================== MISSION ==================== -->
+<section class="section-dark" id="mission">
+    <div class="section" style="padding-bottom: 60px;">
+        <div class="section-header reveal">
+            <span class="overline">Our Mission</span>
+            <h2>Every patient deserves the truth about their dental care</h2>
+            <p>We believe dental decisions should be based on trust, not marketing budgets. Dentravo exists to end the information asymmetry that has plagued dental care for decades.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 900px; margin: 0 auto;">
+            <div class="glass" style="padding: 36px;" >
+                <div class="reveal reveal-delay-1">
+                    <div style="font-size: 36px; margin-bottom: 16px;">&#x1F4A1;</div>
+                    <h3 style="font-size: 20px; font-weight: 700; color: white; margin-bottom: 10px;">Transparency First</h3>
+                    <p style="font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.6;">No paid rankings. No hidden fees. No sponsored results disguised as recommendations. What you see is what's real.</p>
+                </div>
+            </div>
+            <div class="glass" style="padding: 36px;">
+                <div class="reveal reveal-delay-2">
+                    <div style="font-size: 36px; margin-bottom: 16px;">&#x1F91D;</div>
+                    <h3 style="font-size: 20px; font-weight: 700; color: white; margin-bottom: 10px;">Trust is the Moat</h3>
+                    <p style="font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.6;">Subscriptions never affect rankings. Payments never influence results. The moment we compromise trust, we lose everything.</p>
+                </div>
+            </div>
+            <div class="glass" style="padding: 36px;">
+                <div class="reveal reveal-delay-3">
+                    <div style="font-size: 36px; margin-bottom: 16px;">&#x1F30D;</div>
+                    <h3 style="font-size: 20px; font-weight: 700; color: white; margin-bottom: 10px;">Changing an Industry</h3>
+                    <p style="font-size: 15px; color: rgba(255,255,255,0.45); line-height: 1.6;">We're building the platform the dental world needs: where great clinics thrive on merit, and patients make informed decisions.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="stat-item">
-        <div class="stat-num">0</div>
-        <div class="stat-label">Paid rankings</div>
-    </div>
-    <div class="stat-item">
-        <div class="stat-num">On-Device</div>
-        <div class="stat-label">Private by design</div>
-    </div>
-    <div class="stat-item">
-        <div class="stat-num">San Diego</div>
-        <div class="stat-label">Launching first</div>
-    </div>
-</div>
+</section>
 
-<!-- Features -->
-<div class="section">
-    <div class="section-header">
-        <p class="overline">Features</p>
-        <h2>Everything you need, nothing you don't</h2>
-        <p>Dentravo gives you honest information and real tools. No paid placements, no hidden agendas, no data selling.</p>
-    </div>
-    <div class="feature-grid">
-        <div class="feature-card">
-            <div class="icon">&#x1F50D;</div>
-            <h3>Find Trusted Clinics</h3>
-            <p>Real reviews, verified credentials, transparent pricing. No paid rankings, ever.</p>
-        </div>
-        <div class="feature-card">
-            <div class="icon">&#x1F9E0;</div>
-            <h3>Pico AI Assistant</h3>
-            <p>Your on-device dental guide. Ask anything, snap a photo, get real answers. Free for everyone.</p>
-        </div>
-        <div class="feature-card">
-            <div class="icon">&#x1F4B3;</div>
-            <h3>Insurance Clarity</h3>
-            <p>Scan your card, see accepted clinics instantly. Track benefits with Dentravo+.</p>
-        </div>
-        <div class="feature-card">
-            <div class="icon">&#x1F4C5;</div>
-            <h3>Book Instantly</h3>
-            <p>Request appointments, get confirmations, auto-add to your calendar.</p>
-        </div>
-        <div class="feature-card">
-            <div class="icon">&#x2B50;</div>
-            <h3>Verified Reviews</h3>
-            <p>Real patients, real visits, real feedback. No fakes, no pay-to-play.</p>
-        </div>
-        <div class="feature-card">
-            <div class="icon">&#x1F9D8;</div>
-            <h3>Anxiety Toolkit</h3>
-            <p>Breathing exercises, calming audio, and appointment prep for dental anxiety.</p>
-        </div>
-    </div>
-    <div style="text-align: center; margin-top: 40px;">
-        <a href="/features" class="btn btn-outline">See All Features</a>
-    </div>
-</div>
-
-<!-- How It Works -->
-<div class="section-alt">
+<!-- ==================== THE PROBLEM ==================== -->
+<section class="section-alt">
     <div class="section">
-        <div class="section-header">
-            <p class="overline">How It Works</p>
-            <h2>From download to dentist in minutes</h2>
+        <div class="section-header reveal">
+            <span class="overline">The Problem</span>
+            <h2>$150 billion in dental benefits go unused every year</h2>
+            <p>Because nobody told patients their coverage was about to expire. Because insurance is deliberately confusing. Because the system profits from your confusion.</p>
         </div>
-        <div class="steps">
-            <div class="step">
-                <h3>Download Dentravo</h3>
-                <p>Free on the App Store. Create an account in seconds with Apple, Google, or email.</p>
+        <div class="stats-row reveal" style="padding: 0;">
+            <div class="stat-item">
+                <div class="stat-num" data-count="150">0</div>
+                <div class="stat-label">Billion $ in wasted benefits/year</div>
             </div>
-            <div class="step">
-                <h3>Find Your Dentist</h3>
-                <p>Search by location, insurance, specialty. Read verified reviews and compare real costs.</p>
+            <div class="stat-item">
+                <div class="stat-num" data-count="74">0</div>
+                <div class="stat-label">% of adults avoid the dentist</div>
             </div>
-            <div class="step">
-                <h3>Book &amp; Go</h3>
-                <p>Request an appointment, get it confirmed, and it's automatically in your calendar.</p>
+            <div class="stat-item">
+                <div class="stat-num" data-count="40">0</div>
+                <div class="stat-label">% delay care due to cost confusion</div>
             </div>
-        </div>
-    </div>
-</div>
-
-<!-- Pico Highlight -->
-<div class="section">
-    <div class="split">
-        <div class="split-text">
-            <p class="overline" style="margin-bottom: 12px;">Meet Pico</p>
-            <h2>Your AI dental guide, free and private</h2>
-            <p>Ask dental questions in text or voice. Snap a photo for instant analysis. Get plain-language explanations of procedures, treatment plans, and costs.</p>
-            <p>Pico runs entirely on your iPhone using Apple Intelligence. Your questions and photos never leave your device. No cloud, no data collection, no compromises.</p>
-            <a href="/features" class="btn btn-outline" style="margin-top: 8px;">Learn More</a>
-        </div>
-        <div class="split-visual">
-            <div style="text-align: center;">
-                <div style="font-size: 64px; margin-bottom: 16px;">&#x1F9E0;</div>
-                <div style="font-size: 22px; font-weight: 700; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Pico</div>
-                <div style="font-size: 14px; color: var(--gray-500); margin-top: 8px;">On-device AI &middot; Always free</div>
+            <div class="stat-item">
+                <div class="stat-num" data-count="0">0</div>
+                <div class="stat-label">Platforms they can actually trust</div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- For Clinics Teaser -->
-<div class="section-alt">
+<!-- ==================== FEATURES ==================== -->
+<section class="section-dark">
     <div class="section">
-        <div class="split reverse">
+        <div class="section-header reveal">
+            <span class="overline">What Dentravo Does</span>
+            <h2>Every tool you need. Nothing you don't.</h2>
+            <p>Built for patients who refuse to settle for opaque, outdated dental experiences.</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="icon">&#x1F50D;</div>
+                <h3>Find Trusted Clinics</h3>
+                <p>Real reviews, verified credentials, transparent pricing. Rankings are never paid &mdash; ever.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="icon">&#x1F9E0;</div>
+                <h3>Pico AI Assistant</h3>
+                <p>On-device dental AI. Ask anything, snap a photo, use voice. 100% free, 100% private.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-3">
+                <div class="icon">&#x1F4B3;</div>
+                <h3>Insurance Clarity</h3>
+                <p>Scan your card, see accepted clinics instantly. Track benefits before they expire.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="icon">&#x1F4C5;</div>
+                <h3>Book Instantly</h3>
+                <p>Request appointments, get confirmations, auto-sync to your calendar. No phone calls.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="icon">&#x2B50;</div>
+                <h3>Verified Reviews</h3>
+                <p>Real patients, real visits, real feedback. Zero fakes. Zero pay-to-play.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-3">
+                <div class="icon">&#x1F9D8;</div>
+                <h3>Anxiety Toolkit</h3>
+                <p>Breathing exercises, calming guides, and appointment prep for dental anxiety.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 48px;" class="reveal">
+            <a href="/features" class="btn btn-outline">Explore All Features</a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECURITY & HIPAA ==================== -->
+<section class="section-alt">
+    <div class="section">
+        <div class="section-header reveal">
+            <span class="overline">Security &amp; Privacy</span>
+            <h2>Your health data is sacred. We treat it that way.</h2>
+            <p>Dentravo is built with a privacy-first architecture. We don't sell your data, we don't track you across apps, and Pico AI runs entirely on your device.</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>HIPAA-Conscious Design</h3>
+                <p>Every feature is designed with HIPAA principles in mind. Protected health information is handled with the highest standard of care and encryption.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <h3>End-to-End Encryption</h3>
+                <p>Your personal data, insurance information, and health records are encrypted in transit and at rest. We use industry-standard TLS and AES-256.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-3">
+                <div class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+                <h3>On-Device AI Processing</h3>
+                <p>Pico runs entirely on your iPhone using Apple Intelligence. Your dental questions and photos never leave your device. Zero cloud processing.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                </div>
+                <h3>No Data Selling. Ever.</h3>
+                <p>Your dental data is yours. We will never sell, share, or monetize your personal health information. Our business model is subscriptions, not surveillance.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                </div>
+                <h3>SOC 2 Roadmap</h3>
+                <p>We're pursuing SOC 2 Type II compliance to independently verify our security controls. Because trust should be auditable, not just promised.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-3">
+                <div class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h3>No Tracking. No Cookies.</h3>
+                <p>Even our website analytics (Plausible) are privacy-first and cookie-free. We practice what we preach at every level.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== RATING INTEGRITY ==================== -->
+<section class="section-dark">
+    <div class="section">
+        <div class="split reveal">
             <div class="split-text">
-                <p class="overline" style="margin-bottom: 12px;">For Dental Practices</p>
-                <h2>Your practice, in every patient's pocket</h2>
-                <p>Claim your free clinic profile, manage reviews, receive booking requests, and connect with patients who are actively looking for a dentist.</p>
-                <p>No paid rankings. Ever. Your clinical excellence is what gets you patients, not your marketing budget.</p>
-                <a href="/marketplace" class="btn btn-outline" style="margin-top: 8px;">Learn More</a>
+                <span class="overline" style="margin-bottom: 20px; display: inline-block;">Rating Integrity</span>
+                <h2 style="color: white;">Our ratings can't be bought. Period.</h2>
+                <p style="color: rgba(255,255,255,0.5);">Every other platform lets clinics pay for better placement. We refuse. Dentravo's ranking algorithm is based on verified patient reviews, clinical credentials, and responsiveness &mdash; never on advertising spend.</p>
+                <p style="color: rgba(255,255,255,0.5);">This isn't just a policy. It's the foundation of everything we build. The moment rankings become purchasable, patients can't trust anything they see. We'd rather have zero revenue than a single paid ranking.</p>
+                <div style="margin-top: 8px; display: flex; flex-direction: column; gap: 16px;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(6,214,160,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg width="16" height="16" fill="none" stroke="#06d6a0" stroke-width="2.5" stroke-linecap="round"><polyline points="1 9 5 13 15 3"/></svg>
+                        </div>
+                        <span style="color: rgba(255,255,255,0.7); font-size: 15px;">Verified patient reviews only</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(6,214,160,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg width="16" height="16" fill="none" stroke="#06d6a0" stroke-width="2.5" stroke-linecap="round"><polyline points="1 9 5 13 15 3"/></svg>
+                        </div>
+                        <span style="color: rgba(255,255,255,0.7); font-size: 15px;">AI-powered moderation detects fake reviews</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(6,214,160,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <svg width="16" height="16" fill="none" stroke="#06d6a0" stroke-width="2.5" stroke-linecap="round"><polyline points="1 9 5 13 15 3"/></svg>
+                        </div>
+                        <span style="color: rgba(255,255,255,0.7); font-size: 15px;">Subscriptions never influence clinic placement</span>
+                    </div>
+                </div>
             </div>
             <div class="split-visual">
-                <div class="visual-icon">&#x1F3E5;</div>
+                <svg viewBox="0 0 200 200" width="180" style="position: relative; z-index: 1;">
+                    <defs>
+                        <linearGradient id="shield-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0066cc"/>
+                            <stop offset="100%" stop-color="#06d6a0"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M100 15 L170 50 L170 110 Q170 160 100 190 Q30 160 30 110 L30 50 Z" fill="none" stroke="url(#shield-grad)" stroke-width="3" opacity="0.6"/>
+                    <path d="M100 35 L150 60 L150 105 Q150 145 100 170 Q50 145 50 105 L50 60 Z" fill="url(#shield-grad)" opacity="0.1"/>
+                    <polyline points="75 100 93 118 128 83" fill="none" stroke="url(#shield-grad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- CTA -->
-<div class="cta-banner" id="download-section">
-    <h2>Ready for transparent dental care?</h2>
-    <p>Download Dentravo and take control of your dental health. Free, private, and built for you.</p>
+<!-- ==================== ENTERPRISE / FOR CLINICS ==================== -->
+<section class="section-alt">
+    <div class="section">
+        <div class="section-header reveal">
+            <span class="overline">Dentravo for Clinics</span>
+            <h2>The platform that grows your practice &mdash; on merit</h2>
+            <p>Dentravo isn't just for patients. We're building the infrastructure that modern dental practices need to thrive in a trust-first marketplace.</p>
+        </div>
+
+        <div class="split reveal" style="margin-bottom: 80px;">
+            <div class="split-text">
+                <h2>Automate patient outreach</h2>
+                <p>Stop wasting hours on phone calls and manual follow-ups. Dentravo automates appointment reminders, recall notifications, review requests, and benefit expiration alerts &mdash; so your front desk can focus on patients, not paperwork.</p>
+                <a href="/marketplace" class="btn btn-outline-dark" style="margin-top: 8px;">Learn More</a>
+            </div>
+            <div class="split-visual">
+                <div style="position: relative; z-index: 1; text-align: center;">
+                    <svg viewBox="0 0 200 160" width="200">
+                        <rect x="20" y="20" width="160" height="120" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                        <rect x="32" y="45" width="90" height="8" rx="4" fill="rgba(0,170,204,0.4)"/>
+                        <rect x="32" y="62" width="65" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+                        <rect x="32" y="79" width="80" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+                        <rect x="32" y="96" width="55" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+                        <circle cx="155" cy="60" r="18" fill="rgba(6,214,160,0.15)" stroke="rgba(6,214,160,0.3)" stroke-width="1"/>
+                        <text x="155" y="65" text-anchor="middle" fill="#06d6a0" font-size="14" font-weight="bold">&#x2713;</text>
+                        <rect x="130" y="90" width="45" height="20" rx="10" fill="rgba(0,102,204,0.3)"/>
+                        <text x="152" y="104" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="9" font-weight="600">Sent</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="icon">&#x1F4E2;</div>
+                <h3>Smart Patient Outreach</h3>
+                <p>Automated recall reminders, post-visit follow-ups, and benefit expiration alerts keep patients engaged without manual effort.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="icon">&#x1F4CA;</div>
+                <h3>Practice Analytics</h3>
+                <p>Real-time dashboards showing patient flow, booking trends, review sentiment, and revenue metrics. Make data-driven decisions.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-3">
+                <div class="icon">&#x1F3C6;</div>
+                <h3>Loyalty &amp; Rewards</h3>
+                <p>Create custom loyalty programs, referral incentives, and seasonal promotions. Turn one-time patients into lifelong advocates.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="icon">&#x1F4AC;</div>
+                <h3>Review Management</h3>
+                <p>Respond to reviews, track patient sentiment over time, and identify areas for improvement &mdash; all from one dashboard.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="icon">&#x1F527;</div>
+                <h3>Profile Customization</h3>
+                <p>Showcase your specialties, staff bios, office photos, accepted insurance plans, and service menus. First impressions matter.</p>
+            </div>
+            <div class="feature-card reveal reveal-delay-3">
+                <div class="icon">&#x1F4B0;</div>
+                <h3>Save 15+ Hours/Week</h3>
+                <p>Between automated outreach, digital booking, and streamlined review management, our practices save an average of 15+ hours weekly.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;" class="reveal">
+            <a href="/marketplace" class="btn btn-dark">Explore Enterprise Plans</a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== HOW IT WORKS ==================== -->
+<section class="section-dark">
+    <div class="section">
+        <div class="section-header reveal">
+            <span class="overline">How It Works</span>
+            <h2 style="color: white;">From download to dentist in minutes</h2>
+        </div>
+        <div class="steps reveal">
+            <div class="step">
+                <h3 style="color: white;">Download Free</h3>
+                <p style="color: rgba(255,255,255,0.45);">Get Dentravo from the App Store. Create your account in seconds with Apple, Google, or email.</p>
+            </div>
+            <div class="step">
+                <h3 style="color: white;">Find Your Dentist</h3>
+                <p style="color: rgba(255,255,255,0.45);">Search by location, insurance, specialty. Read verified reviews. Compare real costs. No sponsored results.</p>
+            </div>
+            <div class="step">
+                <h3 style="color: white;">Book &amp; Go</h3>
+                <p style="color: rgba(255,255,255,0.45);">Request an appointment, get confirmation, auto-sync to your calendar. Ask Pico anything along the way.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== PICO AI ==================== -->
+<section class="section-alt">
+    <div class="section">
+        <div class="split reverse reveal">
+            <div class="split-text">
+                <span class="overline" style="margin-bottom: 20px; display: inline-block;">Meet Pico</span>
+                <h2>Your AI dental guide. Free. Private. Always there.</h2>
+                <p>Ask dental questions in text or voice. Snap a photo for instant analysis. Get plain-language explanations of procedures, treatment plans, and costs. Pico knows dental health inside and out.</p>
+                <p>Powered by Apple Intelligence, Pico runs entirely on your iPhone. Your questions, photos, and health data never leave your device. No cloud. No data collection. No compromises.</p>
+                <a href="/features" class="btn btn-outline-dark" style="margin-top: 8px;">Learn More</a>
+            </div>
+            <div class="split-visual" style="background: linear-gradient(135deg, #0a0a2e, #1a1a4e);">
+                <div style="position: relative; z-index: 1; text-align: center;">
+                    <div style="font-size: 72px; margin-bottom: 16px; animation: float 5s ease-in-out infinite;">&#x1F9E0;</div>
+                    <div style="font-size: 28px; font-weight: 800; background: linear-gradient(135deg, #7b61ff, #00aacc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Pico</div>
+                    <div style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 8px;">On-device AI &middot; Always free</div>
+                    <div style="display: flex; gap: 8px; justify-content: center; margin-top: 16px;">
+                        <span style="padding: 5px 12px; border-radius: 20px; background: rgba(255,255,255,0.06); font-size: 11px; color: rgba(255,255,255,0.5);">Text</span>
+                        <span style="padding: 5px 12px; border-radius: 20px; background: rgba(255,255,255,0.06); font-size: 11px; color: rgba(255,255,255,0.5);">Photo</span>
+                        <span style="padding: 5px 12px; border-radius: 20px; background: rgba(255,255,255,0.06); font-size: 11px; color: rgba(255,255,255,0.5);">Voice</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SAVINGS ==================== -->
+<section class="section-dark">
+    <div class="section" style="text-align: center;">
+        <div class="section-header reveal">
+            <span class="overline">Real Savings</span>
+            <h2 style="color: white;">Stop leaving money on the table</h2>
+            <p>Dentravo+ subscribers track their remaining benefits, get expiration alerts, and see cost estimates before every visit. Our users report saving hundreds per year in benefits they would have lost.</p>
+        </div>
+        <div class="stats-row reveal" style="padding: 0 0 40px 0;">
+            <div class="stat-item">
+                <div class="stat-num">$1,500</div>
+                <div class="stat-label" style="color: rgba(255,255,255,0.35);">Avg. annual maximum</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">33%</div>
+                <div class="stat-label" style="color: rgba(255,255,255,0.35);">Of benefits go unused</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">$500+</div>
+                <div class="stat-label" style="color: rgba(255,255,255,0.35);">Saved per family/year</div>
+            </div>
+        </div>
+        <div class="reveal">
+            <a href="/pricing" class="btn btn-gradient">See Pricing</a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta-banner" id="download-section">
+    <h2>The future of dental care<br>starts with trust.</h2>
+    <p>Download Dentravo. Find a dentist you can believe in. Take control of your dental health &mdash; for free.</p>
     <a href="#download" class="btn btn-gradient">
-        <svg width="18" height="22" viewBox="0 0 20 24" fill="none" style="flex-shrink:0;">
-            <path d="M16.5 8.3c-.1.1-2.9 1.7-2.9 5.1 0 4 3.5 5.4 3.6 5.4-.0.1-.6 1.9-1.9 3.8-1.1 1.6-2.3 3.2-4.1 3.2s-2.3-1.1-4.3-1.1c-2 0-2.7 1.1-4.3 1.1S.4 24.2-.8 22.5C-2.2 20.5-3.3 17.2-3.3 14c0-5.1 3.3-7.8 6.6-7.8 1.7 0 3.2 1.2 4.3 1.2 1 0 2.7-1.2 4.7-1.2.8 0 3.5.1 5.2 2.1zM11.3 4.3C12.1 3.3 12.7 2 12.7.5c0-.2 0-.4-.0-.5-1.2.0-2.7.8-3.6 1.9-.7.8-1.4 2.1-1.4 3.4 0 .2.0.4.1.5.1.0.2.0.3.0 1.1 0 2.5-.8 3.2-1.5z" transform="translate(3.3 0)" fill="currentColor"/>
-        </svg>
+        <svg width="18" height="22" viewBox="0 0 18 22" fill="none" style="flex-shrink:0;"><path d="M14.94 7.47c-.09.07-2.61 1.53-2.61 4.59 0 3.6 3.15 4.86 3.24 4.86-.01.07-.5 1.71-1.71 3.42-.99 1.44-2.07 2.88-3.69 2.88s-2.07-.99-3.87-.99-2.43.99-3.87.99-2.34-1.35-3.51-3.06C-2.43 18.36-3.42 15.39-3.42 12.51c0-4.59 2.97-7.02 5.94-7.02 1.53 0 2.88 1.08 3.87 1.08.9 0 2.43-1.08 4.23-1.08.72 0 3.15.09 4.68 1.89zM10.17 3.87c.72-.9 1.26-2.07 1.26-3.42 0-.18 0-.36-.03-.45-1.08.04-2.43.72-3.24 1.71-.63.72-1.26 1.89-1.26 3.06 0 .18.03.36.05.45.09.01.18.01.27.01.99 0 2.25-.72 2.88-1.35z" transform="translate(2.5 0)" fill="currentColor"/></svg>
         Download for iOS
     </a>
-    <p style="margin-top: 16px; font-size: 13px; color: var(--gray-400);">Coming soon to the App Store &middot; iOS 26+</p>
-</div>
+    <p style="margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.3);">Coming soon &middot; iOS 26+ &middot; San Diego first</p>
+</section>
+
+<!-- ==================== LEGAL NOTICE ==================== -->
+<section style="background: var(--dark-surface); padding: 40px 24px; border-top: 1px solid rgba(255,255,255,0.04);">
+    <div style="max-width: 800px; margin: 0 auto; font-size: 12px; color: rgba(255,255,255,0.25); line-height: 1.8; text-align: center;">
+        <p><strong style="color: rgba(255,255,255,0.4);">Important Disclaimers:</strong> Dentravo is not a healthcare provider and does not provide medical or dental advice. Pico AI provides educational information only and is not a substitute for professional dental care. Always consult a licensed dentist for diagnosis and treatment. Insurance verification features are provided for informational purposes and may not reflect real-time coverage status. Dentravo is designed with HIPAA principles in mind but is not a covered entity under HIPAA. Benefit Tracker estimates are approximate and based on user-provided information. Actual coverage, costs, and benefits may vary. Dentravo does not guarantee the accuracy of third-party clinic information. Rankings and ratings reflect aggregated patient feedback and are never influenced by payments, advertising, or subscription status.</p>
+        <p style="margin-top: 12px;"><a href="/privacy.html" style="color: rgba(255,255,255,0.4); text-decoration: underline;">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html" style="color: rgba(255,255,255,0.4); text-decoration: underline;">Terms of Service</a> &nbsp;&middot;&nbsp; <a href="mailto:legal@dentravo.com" style="color: rgba(255,255,255,0.4); text-decoration: underline;">Legal Inquiries</a></p>
+    </div>
+</section>
 
 <!-- Footer -->
-<footer class="footer">
+<footer class="footer" style="padding-top: 60px;">
     <div class="footer-inner">
         <div class="footer-brand">
             <div class="footer-logo">Dentravo</div>
-            <p>Dental care, made transparent. Find trusted dentists, verify insurance, and get AI-powered guidance.</p>
+            <p>Dental care, made transparent. The platform where trust comes first &mdash; for patients and practices.</p>
         </div>
         <div class="footer-col">
             <h4>Product</h4>
             <a href="/features">Features</a>
             <a href="/pricing">Pricing</a>
             <a href="/marketplace">For Clinics</a>
+            <a href="#download">Download</a>
         </div>
         <div class="footer-col">
             <h4>Resources</h4>
             <a href="/blog/">Blog</a>
             <a href="mailto:support@dentravo.com">Support</a>
             <a href="mailto:hello@dentravo.com">Contact</a>
+            <a href="mailto:providers@dentravo.com">Enterprise</a>
         </div>
         <div class="footer-col">
             <h4>Legal</h4>
             <a href="/privacy.html">Privacy Policy</a>
             <a href="/terms.html">Terms of Service</a>
+            <a href="mailto:legal@dentravo.com">Legal</a>
         </div>
     </div>
-    <div class="footer-bottom">&copy; 2026 Dentravo LLC. All rights reserved.</div>
+    <div class="footer-bottom">&copy; 2026 Dentravo LLC. All rights reserved. San Diego, California.</div>
 </footer>
 
-<!-- Structured Data for SEO -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -280,5 +536,6 @@
 }
 </script>
 
+<script src="/script.js"></script>
 </body>
 </html>
