@@ -1,4 +1,4 @@
-// ===== DENTRAVO V8 — ELEVATED =====
+// ===== DENTRAVO V10 — TRUST & ACCURACY =====
 (function() {
     'use strict';
 
