@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; connect-src https://ufwfhmhiphfzyfijckws.supabase.co; img-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'">
     <title>Dashboard - Dentravo Employer Portal</title>
     <link rel="stylesheet" href="shared.css">
 </head>
 <body>
+    <script>if(window.top!==window.self)window.top.location=window.self.location;</script>
     <nav class="top-nav">
         <a href="index.html" class="nav-brand">
             <span class="brand-name">Dentravo</span>
@@ -15,7 +18,7 @@
         <div class="nav-links">
             <a href="index.html" class="active">Dashboard</a>
             <a href="employees.html">Employees</a>
-            <button class="sign-out-btn" onclick="signOut()">Sign Out</button>
+            <button class="sign-out-btn" id="signOutBtn">Sign Out</button>
         </div>
     </nav>
 
@@ -52,7 +55,7 @@
             </p>
             <div class="invite-box">
                 <span class="code" id="inviteCode">------</span>
-                <button class="copy-btn" id="copyBtn" onclick="copyInviteCode()">Copy Code</button>
+                <button class="copy-btn" id="copyBtn">Copy Code</button>
             </div>
         </div>
     </main>
@@ -61,6 +64,9 @@
     <script src="config.js"></script>
     <script src="auth.js"></script>
     <script>
+        document.getElementById('signOutBtn').addEventListener('click', signOut);
+        document.getElementById('copyBtn').addEventListener('click', copyInviteCode);
+
         const PLAN_PRICES = { basic: 4.99, pro: 7.99 };
 
         (async () => {

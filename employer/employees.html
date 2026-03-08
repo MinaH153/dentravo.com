@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; connect-src https://ufwfhmhiphfzyfijckws.supabase.co; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'self'">
     <title>Employees - Dentravo Employer Portal</title>
     <link rel="stylesheet" href="shared.css">
     <style>
@@ -77,6 +79,7 @@
     </style>
 </head>
 <body>
+    <script>if(window.top!==window.self)window.top.location=window.self.location;</script>
     <nav class="top-nav">
         <a href="index.html" class="nav-brand">
             <span class="brand-name">Dentravo</span>
@@ -85,7 +88,7 @@
         <div class="nav-links">
             <a href="index.html">Dashboard</a>
             <a href="employees.html" class="active">Employees</a>
-            <button class="sign-out-btn" onclick="signOut()">Sign Out</button>
+            <button class="sign-out-btn" id="signOutBtn">Sign Out</button>
         </div>
     </nav>
 
@@ -130,8 +133,8 @@
             <h3>Deactivate Employee</h3>
             <p>Are you sure you want to deactivate <strong id="deactivateName">this employee</strong>? They will lose access to employer benefits.</p>
             <div class="confirm-actions">
-                <button class="btn-cancel" onclick="closeModal()">Cancel</button>
-                <button class="btn-confirm-danger" id="confirmDeactivateBtn" onclick="confirmDeactivate()">Deactivate</button>
+                <button class="btn-cancel" id="modalCancelBtn">Cancel</button>
+                <button class="btn-confirm-danger" id="confirmDeactivateBtn">Deactivate</button>
             </div>
         </div>
     </div>
@@ -210,7 +213,7 @@
                     </td>
                     <td>
                         ${emp.is_active
-                            ? `<button class="btn-sm btn-danger" onclick="openDeactivateModal('${emp.id}', '${escapeHtml(emp.name)}')">Deactivate</button>`
+                            ? `<button class="btn-sm btn-danger deactivate-btn" data-link-id="${escapeAttr(emp.id)}" data-name="${escapeAttr(emp.name)}">Deactivate</button>`
                             : '<span style="color:var(--text-secondary);font-size:0.8rem">--</span>'}
                     </td>
                 </tr>
@@ -270,6 +273,27 @@
             div.textContent = str;
             return div.innerHTML;
         }
+
+        // Safe for HTML attribute values (escapes quotes too)
+        function escapeAttr(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#x27;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;');
+        }
+
+        document.getElementById('signOutBtn').addEventListener('click', signOut);
+        document.getElementById('modalCancelBtn').addEventListener('click', closeModal);
+        document.getElementById('confirmDeactivateBtn').addEventListener('click', confirmDeactivate);
+
+        // Event delegation — avoids injecting user data into onclick strings
+        document.getElementById('employeeTableBody').addEventListener('click', function(e) {
+            const btn = e.target.closest('.deactivate-btn');
+            if (!btn) return;
+            openDeactivateModal(btn.dataset.linkId, btn.dataset.name);
+        });
     </script>
 </body>
 </html>
