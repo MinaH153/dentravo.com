@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex,nofollow">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.98.0; style-src 'self' 'unsafe-inline'; connect-src https://ufwfhmhiphfzyfijckws.supabase.co; img-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.98.0; style-src 'self' 'unsafe-inline'; connect-src https://ufwfhmhiphfzyfijckws.supabase.co; img-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
     <title>Employer Login - Dentravo</title>
     <link rel="stylesheet" href="shared.css">
     <style>
@@ -162,7 +163,7 @@
 
                 if (empErr || !employer) {
                     await sb.auth.signOut();
-                    throw new Error('This account is not linked to an employer. Contact support.');
+                    throw new Error('Invalid credentials or access denied. Contact support if you need help.');
                 }
 
                 window.location.href = 'index.html';
