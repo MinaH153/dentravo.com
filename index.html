@@ -63,6 +63,14 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
             No paid rankings
         </div>
+        <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            NPI verified
+        </div>
+        <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            iOS only · private by design
+        </div>
     </div>
 
     <!-- Pico -->
@@ -102,14 +110,24 @@
     </div>
 </section>
 
+<!-- ====== POWERED BY ROW ====== -->
+<div class="powered-row">
+    <span class="powered-label">Verified by</span>
+    <div class="powered-item"><div class="pi-dot"></div>NPI Registry — provider credentials</div>
+    <div class="powered-item"><div class="pi-dot"></div>Google Places — clinic data &amp; photos</div>
+    <div class="powered-item"><div class="pi-dot"></div>Apple Foundation Models — on-device AI</div>
+    <div class="powered-item"><div class="pi-dot"></div>ADA guidelines — dental content</div>
+    <div class="powered-item"><div class="pi-dot"></div>Verified patient visits — reviews</div>
+</div>
+
 <!-- ====== STATS ====== -->
 <section class="sec-full" style="background:var(--bg)">
     <div class="sec" style="padding-top:32px;padding-bottom:32px">
         <div class="stats-strip rv">
-            <div class="stat"><div class="stat-num"><span data-count="927" data-prefix="$">$0</span></div><div class="stat-label">Wasted per person yearly</div></div>
-            <div class="stat"><div class="stat-num"><span data-count="24">0</span></div><div class="stat-label">Dental knowledge domains</div></div>
-            <div class="stat"><div class="stat-num"><span data-count="80" data-suffix="%">0%</span></div><div class="stat-label">Queries answered on-device</div></div>
-            <div class="stat"><div class="stat-num"><span data-count="0">0</span></div><div class="stat-label">Data sent to the cloud</div></div>
+            <div class="stat"><div class="stat-num"><span data-count="927" data-prefix="$">$0</span></div><div class="stat-label">In dental benefits wasted per insured American, per year</div><span class="stat-source">Source: NADP / $150B total ÷ 162M insured</span></div>
+            <div class="stat"><div class="stat-num"><span data-count="24">0</span></div><div class="stat-label">Dental knowledge domains Pico covers</div><span class="stat-source">Source: Dentravo Knowledge Engine, built on ADA curriculum</span></div>
+            <div class="stat"><div class="stat-num"><span data-count="80" data-suffix="%">0%</span></div><div class="stat-label">Of Pico queries answered entirely on-device</div><span class="stat-source">Source: Dentravo internal — Apple Foundation Models</span></div>
+            <div class="stat"><div class="stat-num"><span data-count="0">0</span></div><div class="stat-label">Dental photos or records sent to our servers by default</div><span class="stat-source">Source: Dentravo Privacy Policy</span></div>
         </div>
     </div>
 </section>
@@ -168,7 +186,25 @@
                 <p>Breathing exercises, calming guides, and Pico-guided appointment prep for dental anxiety.</p>
             </div>
         </div>
-        <div style="text-align:center;margin-top:48px" class="rv"><a href="/features" class="btn btn-ghost">Explore All Features</a></div>
+        <div class="trust-seal-row rv" style="margin-top:40px">
+            <div class="trust-seal">
+                <div class="ts-icon" style="background:var(--success-tonal)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                <div class="ts-text"><span class="ts-title">NPI Verified</span><span class="ts-sub">All providers checked against the national registry</span></div>
+            </div>
+            <div class="trust-seal">
+                <div class="ts-icon" style="background:var(--accent-tonal)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+                <div class="ts-text"><span class="ts-title">On-Device AI</span><span class="ts-sub">Apple Foundation Models · no server required</span></div>
+            </div>
+            <div class="trust-seal">
+                <div class="ts-icon" style="background:var(--info-tonal)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--info)" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <div class="ts-text"><span class="ts-title">Verified Reviews Only</span><span class="ts-sub">Real patients, real visits, AI-moderated</span></div>
+            </div>
+            <div class="trust-seal">
+                <div class="ts-icon" style="background:var(--warning-tonal)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--warning)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="ts-text"><span class="ts-title">Subscription-Neutral</span><span class="ts-sub">Rankings never influenced by subscriptions</span></div>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:32px" class="rv"><a href="/features" class="btn btn-ghost">Explore All Features</a></div>
     </div>
 </section>
 
@@ -301,9 +337,9 @@
             <div class="split-text rv-l">
                 <span class="overline ol-warning">Stop Wasting Money</span>
                 <h2>The average American wastes <span style="color:var(--warning)">$927/year</span> in dental benefits.</h2>
-                <p>Most people don't know what their insurance covers, how much they've used, or when their benefits expire. They leave money on the table every single year.</p>
+                <p>Most people don't know what their insurance covers, how much they've used, or when their benefits expire. They leave money on the table every single year. <em class="source-tag">Source: National Association of Dental Plans (NADP) — est. $150B+ wasted annually across ~162M insured Americans</em></p>
                 <p>Dentravo+ tracks your remaining benefits in real time, estimates costs for any procedure with your specific plan, and alerts you at 90, 60, 30, 14, and 7 days before your benefits reset.</p>
-                <p style="font-weight:700;color:var(--text-primary);margin-top:8px">Dentravo+ costs $48/year. The average user saves $927. That's a 19x return.</p>
+                <p style="font-weight:700;color:var(--text-primary);margin-top:8px">Dentravo+ costs $48/year. The average user saves $927. That's a 19x return. <em class="source-tag">Based on NADP annual waste estimate</em></p>
                 <div style="margin-top:24px"><a href="/pricing" class="btn btn-accent">See Plans</a></div>
             </div>
             <div class="split-visual rv-r">
