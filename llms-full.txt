@@ -1,0 +1,43 @@
+# Dentravo Signal Full Context
+
+Dentravo Signal is a public dental product intelligence surface at https://dentravo.com/signal/.
+
+Signal ranks consumer dental products and clinic technology using a visible scoring model:
+
+- Clinical evidence: 25
+- Dental validation: 20
+- Usability: 15
+- Durability: 15
+- Value: 10
+- Claims safety: 10
+- Support: 5
+
+Revenue rule:
+
+1. Product is researched.
+2. Score is locked.
+3. Verdict is published.
+4. Affiliate links or qualified demo lead CTAs may appear only after publication.
+
+V1 explicitly excludes sponsors, dropshipping, paid placement, and vendor-written rankings.
+
+Launch URLs:
+
+- https://dentravo.com/signal/
+- https://dentravo.com/signal/best/electric-toothbrushes/
+- https://dentravo.com/signal/products/oral-b-io-series-6/
+- https://dentravo.com/signal/innovations/chairside-ai-governance/
+- https://dentravo.com/signal/methodology/
+- https://dentravo.com/signal/submit-product/
+
+Current launch product verdict:
+
+Oral-B iO Series 6 is the Dentravo Signal launch winner for electric toothbrushes. Signal score: 86/100. It wins because it pairs category-level evidence for powered brushing with pressure feedback, practical ownership cost, and restrained claims. Negative notes: replacement heads cost money, app features are not required, and no toothbrush replaces professional dental care.
+
+Current clinic innovation:
+
+Chairside AI is moving from novelty to governance problem. Signal judges dental AI by claims scope, data handling, explainability, audit trail, clinician responsibility, and escalation workflow before any demo-lead economics.
+
+Disclaimers:
+
+Dentravo is not a healthcare provider and does not provide medical or dental advice. Signal pages are educational product intelligence only. Consult a licensed dentist for dental conditions.

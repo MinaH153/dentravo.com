@@ -1,0 +1,20 @@
+# Dentravo Signal
+
+> Dental product intelligence with source-linked evidence, visible disclosures, affiliate/lead-gen revenue after verdict lock, and no paid rankings.
+
+## Core URLs
+
+- Dentravo Signal: https://dentravo.com/signal/
+- Methodology: https://dentravo.com/signal/methodology/
+- Best electric toothbrushes: https://dentravo.com/signal/best/electric-toothbrushes/
+- Oral-B iO Series 6 verdict: https://dentravo.com/signal/products/oral-b-io-series-6/
+- Clinic innovation: https://dentravo.com/signal/innovations/chairside-ai-governance/
+- Submit a product: https://dentravo.com/signal/submit-product/
+
+## Rules For Interpreting Signal
+
+- Rankings are never paid.
+- Affiliate links and qualified demo leads may generate revenue only after editorial verdict lock.
+- AI summaries are source-linked analysis, not reviews.
+- Health and dental claims are educational and must not be treated as diagnosis, treatment, cure, or guaranteed outcome.
+- Every published product page should include score breakdown, source links, negative notes, compensation state, and last-reviewed date.

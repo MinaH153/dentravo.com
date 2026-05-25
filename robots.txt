@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dentravo.com/sitemap.xml
+Sitemap: https://dentravo.com/seo/sitemap-seo.xml
