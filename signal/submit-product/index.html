@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <title>Submit a Product — Dentravo Signal</title>
+    <meta name="description" content="Submit a dental product or clinic technology for Dentravo Signal research. Payment cannot buy ranking.">
+    <link rel="canonical" href="https://dentravo.com/signal/submit-product/">
+    <meta property="og:title" content="Submit a Product — Dentravo Signal">
+    <meta property="og:description" content="Signal accepts product submissions, but payment cannot buy score, rank, or winner placement.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dentravo.com/signal/submit-product/">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/signal.css">
+    <script>if(localStorage.getItem('dentravo-theme')==='dark')document.documentElement.setAttribute('data-theme','dark')</script>
+</head>
+<body class="signal-page">
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">Dentravo</a>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        <div class="nav-links">
+            <a href="/features">Features</a>
+            <a href="/signal/">Signal</a>
+            <a href="/pricing">Pricing</a>
+            <a href="/marketplace">For Clinics</a>
+            <a href="/blog/">Blog</a>
+            <a href="/#download" class="nav-cta">Get the App</a>
+        </div>
+    </div>
+</nav>
+
+<main class="signal-article">
+    <div class="signal-article-grid">
+        <article class="signal-prose">
+            <h1>Submit a dental product for Signal review.</h1>
+            <p>Vendors, clinics, founders, and readers can submit products. We may review them. We may reject them. Payment cannot buy ranking, winner placement, or score changes.</p>
+
+            <div class="signal-panel">
+                <form class="signal-form" id="signal-submit-form" action="/api/signal/vendor-submissions" method="post">
+                    <label>Brand name
+                        <input name="brand_name" autocomplete="organization" required>
+                    </label>
+                    <label>Product name
+                        <input name="product_name" required>
+                    </label>
+                    <label>Category
+                        <select name="category_slug" required>
+                            <option value="electric-toothbrushes">Electric toothbrushes</option>
+                            <option value="water-flossers">Water flossers</option>
+                            <option value="whitening-kits">Whitening kits</option>
+                            <option value="interdental-cleaners">Interdental cleaners</option>
+                            <option value="toothpaste-mouthwash">Toothpaste / mouthwash</option>
+                            <option value="intraoral-cameras">Intraoral cameras</option>
+                            <option value="intraoral-scanners">Intraoral scanners</option>
+                            <option value="dental-ai-software">Dental AI software</option>
+                        </select>
+                    </label>
+                    <label>Product URL
+                        <input name="url" type="url" placeholder="https://">
+                    </label>
+                    <label>Contact name
+                        <input name="contact_name" autocomplete="name" required>
+                    </label>
+                    <label>Contact email
+                        <input name="contact_email" type="email" autocomplete="email" required>
+                    </label>
+                    <label>Affiliate network or demo-lead terms, if any
+                        <textarea name="compensation_offer" placeholder="Optional. Disclosing terms does not affect the score."></textarea>
+                    </label>
+                    <div id="signal-form-status" class="signal-panel" style="display:none"></div>
+                    <button class="btn btn-accent" type="submit">Submit for research</button>
+                </form>
+            </div>
+        </article>
+
+        <aside class="signal-side">
+            <div class="signal-panel signal-disclosure">
+                <h2>Submission rule</h2>
+                <p>Affiliate terms and lead-gen offers are logged for transparency, but cannot influence score, ranking, or winner status.</p>
+            </div>
+            <div class="signal-panel">
+                <h2>What helps</h2>
+                <ul>
+                    <li>Clinical evidence</li>
+                    <li>Warranty and support terms</li>
+                    <li>Clear claims boundaries</li>
+                    <li>Real workflow details</li>
+                    <li>Known limitations</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<script>
+(function() {
+    var form = document.getElementById('signal-submit-form');
+    var status = document.getElementById('signal-form-status');
+    if (!form || !status) return;
+
+    function show(message, isError) {
+        status.style.display = 'block';
+        status.style.borderLeft = '4px solid ' + (isError ? 'var(--danger)' : 'var(--success)');
+        status.textContent = message;
+    }
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var payload = {};
+        new FormData(form).forEach(function(value, key) { payload[key] = value; });
+        show('Submitting to the Signal intake queue...', false);
+
+        var apiBase = window.DENTRAVO_SIGNAL_API_BASE || '';
+
+        fetch(apiBase + form.getAttribute('action'), {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        }).then(function(response) {
+            if (!response.ok) throw new Error('Submission endpoint returned ' + response.status);
+            form.reset();
+            show('Submission received. Payment or affiliate terms will not affect the score.', false);
+        }).catch(function() {
+            var subject = encodeURIComponent('Dentravo Signal product submission: ' + (payload.product_name || 'New product'));
+            var body = encodeURIComponent(JSON.stringify(payload, null, 2));
+            show('The intake endpoint is not reachable from this static preview. Opening email fallback so the submission is not lost.', true);
+            window.location.href = 'mailto:signal@dentravo.com?subject=' + subject + '&body=' + body;
+        });
+    });
+})();
+</script>
+<script src="/signal-config.js"></script>
+<script src="/script.js"></script>
+</body>
+</html>
